@@ -1,0 +1,956 @@
+main.channels {
+    section {
+        min-height: fit-content;
+
+        &.introduction {
+            min-height: 80vh;
+
+            .wrap-overlay {
+                width: 100%;
+                height: 100%;
+                min-height: inherit;
+                background-color: black;
+                background:
+                    url("../media/images/concepts-branding.webp"),
+                    linear-gradient(0deg, rgba(27, 20, 100, 1) 0%, rgba(27, 20, 100, 0) 50%),
+                    url("../media/images/channels-bg1.webp");
+                background-size: 200px auto, cover, cover;
+                background-repeat: no-repeat, no-repeat, no-repeat;
+                background-position: 20% 20%, top left, center;
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                .text-content {
+                    min-height: 30vh;
+                    width: 80%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            text-align: center;
+                        }
+                    }
+
+                    .desc {
+                        padding: 30px 0;
+
+                        p {
+                            color: white;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.channels {
+            .channel {
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .channel-title {
+                    display: flex;
+                    justify-content: right;
+                    width: 100%;
+                    height: 50vh;
+
+                    .title-bg {
+                        width: 50%;
+                        min-height: fit-content;
+                        background-color: #D4145A;
+                        display: flex;
+                        align-items: center;
+
+                        .title {
+                            margin-left: -31%;
+
+                            h1 {
+                                font-size: 9vw;
+                                font-family: "Nexa";
+                                font-weight: 500;
+                                text-transform: capitalize;
+                                color: #1b1464;
+
+                                &:nth-child(2) {
+                                    margin-left: -5%;
+                                }
+
+                                span {
+                                    font-family: "Nexa";
+                                    font-weight: 500;
+                                    color: white;
+                                    // -webkit-text-stroke: 3px #1b1464;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .channel-content {
+                    width: 100%;
+                    height: 50vh;
+                    background-color: white;
+
+                    .content-wrap {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: row-reverse;
+
+                        .media-wrap {
+                            height: 100%;
+                            width: 50%;
+
+                            .wrap {
+                                height: 100%;
+                                width: 100%;
+
+                                .video-mask {
+                                    height: 100%;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    background-color: gray;
+
+                                    video {
+                                        height: 100%;
+                                        width: 100%;
+                                        object-fit: cover;
+                                        position: relative;
+                                        top: 0;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+
+                                        &.p {
+                                            display: none;
+                                        }
+
+                                        &.md {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .text-wrap {
+                            height: 100%;
+                            width: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .wrap {
+                                height: fit-content;
+                                width: 90%;
+                                padding: 10px;
+
+                                p {
+                                    max-height: 40vh;
+                                    color: #1b1464;
+                                }
+
+                                ul {
+                                    max-height: 40vh;
+                                    list-style: "❖ ";
+
+                                    li {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    background-color: #1b1464;
+                    flex-direction: column;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #D4145A;
+
+                            .title {
+                                margin-left: -31%;
+
+                                h1 {
+                                    color: #1b1464;
+
+                                    &:nth-child(2) {
+                                        margin-left: -5%;
+                                    }
+
+                                    span {
+                                        color: white;
+                                        -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: white;
+
+                        .content-wrap {
+                            flex-direction: row-reverse;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    p {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: #ffffff;
+                    flex-direction: column-reverse;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #000000;
+
+                            .title {
+                                margin-left: -45%;
+
+                                h1 {
+                                    text-transform: unset;
+                                    color: white;
+
+                                    span {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: #D4145A;
+
+                        .content-wrap {
+                            flex-direction: row;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    ul {
+                                        li {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    background-color: #1b1464;
+                    flex-direction: column;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #D4145A;
+
+                            .title {
+                                margin-left: -33%;
+
+                                h1 {
+                                    color: #1b1464;
+
+                                    &:nth-child(2) {
+                                        margin-left: -5%;
+                                    }
+
+                                    span {
+                                        color: white;
+                                        -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: white;
+
+                        .content-wrap {
+                            flex-direction: row-reverse;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    p {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(4) {
+                    background-color: #ffffff;
+                    flex-direction: column-reverse;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #000000;
+
+                            .title {
+                                margin-left: -45%;
+
+                                h1 {
+                                    color: white;
+
+                                    span {
+                                        color: #1b1464;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: #D4145A;
+
+                        .content-wrap {
+                            flex-direction: row;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    ul {
+                                        li {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(5) {
+                    background-color: #1b1464;
+                    flex-direction: column;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #D4145A;
+
+                            .title {
+                                margin-left: -31%;
+
+                                h1 {
+                                    color: #1b1464;
+
+                                    &:nth-child(2) {
+                                        margin-left: -5%;
+                                    }
+
+                                    span {
+                                        color: white;
+                                        -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: white;
+
+                        .content-wrap {
+                            flex-direction: row-reverse;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    p {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(6) {
+                    background-color: #ffffff;
+                    flex-direction: column-reverse;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #000000;
+
+                            .title {
+                                margin-left: -40%;
+
+                                h1 {
+                                    color: white;
+
+                                    span {
+                                        color: #1b1464;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+
+                                    &:nth-child(2) {
+                                        margin-left: 31%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: #D4145A;
+
+                        .content-wrap {
+                            flex-direction: row;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    ul {
+                                        li {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(7) {
+                    background-color: #1b1464;
+                    flex-direction: column;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #D4145A;
+
+                            .title {
+                                margin-left: -31%;
+
+                                h1 {
+                                    color: #1b1464;
+
+                                    &:nth-child(2) {
+                                        margin-left: -12%;
+                                    }
+
+                                    span {
+                                        color: white;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: white;
+
+                        .content-wrap {
+                            flex-direction: row-reverse;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    p {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(8) {
+                    background-color: #ffffff;
+                    flex-direction: column-reverse;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #000000;
+
+                            .title {
+                                margin-left: -41%;
+
+                                h1 {
+                                    color: white;
+
+                                    span {
+                                        color: #1b1464;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+
+                                    &:nth-child(2) {
+                                        margin-left: 3%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: #D4145A;
+
+                        .content-wrap {
+                            flex-direction: row;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    ul {
+                                        li {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(9) {
+                    background-color: #1b1464;
+                    flex-direction: column;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #D4145A;
+
+                            .title {
+                                margin-left: -34%;
+
+                                h1 {
+                                    color: #1b1464;
+
+                                    &:nth-child(2) {
+                                        margin-left: -5%;
+                                    }
+
+                                    span {
+                                        color: white;
+                                        -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: white;
+
+                        .content-wrap {
+                            flex-direction: row-reverse;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    p {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(10) {
+                    background-color: #ffffff;
+                    flex-direction: column-reverse;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #000000;
+
+                            .title {
+                                margin-left: -37%;
+
+                                h1 {
+                                    color: white;
+
+                                    span {
+                                        color: #1b1464;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+
+                                    &:nth-child(2) {
+                                        margin-left: 24%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: #D4145A;
+
+                        .content-wrap {
+                            flex-direction: row;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    ul {
+                                        li {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(11) {
+                    background-color: #1b1464;
+                    flex-direction: column;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #D4145A;
+
+                            .title {
+                                margin-left: -34%;
+
+                                h1 {
+                                    color: #1b1464;
+
+                                    &:nth-child(2) {
+                                        margin-left: -5%;
+                                    }
+
+                                    span {
+                                        color: white;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: white;
+
+                        .content-wrap {
+                            flex-direction: row-reverse;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    p {
+                                        color: #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(12) {
+                    background-color: #ffffff;
+                    flex-direction: column-reverse;
+
+                    .channel-title {
+                        display: flex;
+                        justify-content: right;
+
+                        .title-bg {
+                            background-color: #000000;
+
+                            .title {
+                                margin-left: -52%;
+
+                                h1 {
+                                    color: white;
+
+                                    span {
+                                        color: #1b1464;
+                                        // -webkit-text-stroke: 3px #1b1464;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        background-color: #D4145A;
+
+                        .content-wrap {
+                            flex-direction: row;
+
+                            .media-wrap {
+                                .wrap {}
+                            }
+
+                            .text-wrap {
+                                .wrap {
+                                    ul {
+                                        li {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &.reach {
+            background-color: #D4145A;
+            min-height: 60vh;
+
+            .swiper {
+                width: 100%;
+                min-height: 50vh;
+
+                .swiper-wrapper {
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        height: 100%;
+                        background-color: #D4145A;
+
+                        /* Center slide text vertically */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                    }
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: #1b1464;
+                    font-weight: bold;
+                }
+
+                .swiper-pagination-bullet-active {
+                    color: #1b1464;
+                }
+            }
+
+            .content-wrap {
+                padding: 40px 0;
+                height: max-content;
+                width: 1005;
+                display: flex;
+                justify-content: center;
+
+                .text-wrap {
+                    width: 90%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            text-align: center;
+                        }
+                    }
+
+                    .desc {
+                        color: white;
+                        text-align: left;
+
+                        p {}
+
+                        ul {
+                            margin-left: 20px;
+
+                            li {
+                                span {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        section {
+            &.channels {
+                .channel {
+                    height: fit-content;
+                    display: block !important;
+                    border-bottom: 2px solid white;
+
+                    .channel-title {
+                        display: block;
+                        height: fit-content;
+
+                        .title-bg {
+                            width: 100%;
+
+                            .title {
+                                margin-left: unset !important;
+                                width: 100%;
+                                padding: 20px 0;
+
+                                h1 {
+                                    text-align: center;
+                                    color: white !important;
+
+                                    span {
+                                        color: white !important;
+                                        -webkit-text-stroke: unset !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .channel-content {
+                        height: unset;
+                        min-height: 60vh;
+
+                        .content-wrap {
+                            flex-direction: column !important;
+
+                            .media-wrap {
+                                width: 100%;
+                                height: 50vh;
+                            }
+
+                            .text-wrap {
+                                width: 100%;
+                                height: unset;
+                                min-height: fit-content;
+                                padding: 30px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.introduction {
+                .wrap-overlay {
+                    .text-content {
+                        .title {
+                            padding-bottom: 10px;
+
+                            h1 {
+                                font-size: 40px;
+                            }
+                        }
+
+                        .desc {
+                            height: 50vh;
+                            overflow-y: scroll;
+                        }
+                    }
+                }
+            }
+
+            &.reach {
+                .content-wrap {
+                    .text-wrap {
+                        .title {
+                            padding-bottom: 10px;
+
+                            h1 {
+                                font-size: 50px;
+                            }
+                        }
+
+                        .desc {
+                            height: 50vh;
+                            overflow-y: scroll;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

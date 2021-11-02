@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-weight: 200;
+}
+
+@import "_fonts";
+
+main {
+    padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(187, 33, 43, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.753);
+    border-radius: 2px;
+    width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+
+@import "_footer";

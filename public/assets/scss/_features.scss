@@ -1,0 +1,828 @@
+main.features {
+    section {
+        min-height: fit-content;
+
+        &.branding {
+            height: 200px;
+            background-color: #E23B3B;
+            background-image: url("../media/images/concepts-linear-branding.webp");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 80% auto;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px 0;
+
+            .logo-long {
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    max-width: auto;
+                }
+            }
+        }
+
+        &.intro {
+            min-height: 50vh;
+            background: url("../media/images/intro-bg.webp"), black;
+            background-size: cover;
+            background-position: center, center;
+            background-repeat: no-repeat;
+
+            .wrap {
+                .title-content {
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 8vw;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .body-content {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 30px 0 10 0;
+
+                    .content-wrap {
+                        width: 25%;
+                        border-top: 1px solid white;
+                        padding: 10px 0;
+
+                        p {
+                            color: white;
+                            max-height: 40vh;
+                            width: 70vw;
+                            margin-left: -100%;
+                        }
+                    }
+                }
+            }
+
+            .media-content {
+                width: 100%;
+                min-height: 300px;
+                display: flex;
+                justify-content: center;
+
+                .wrap {
+                    width: 50%;
+                    height: fit-content;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        &.video {
+            min-height: 50vh;
+            width: 100%;
+
+            .video-wrap {
+                height: 100vh;
+                width: 100%;
+                position: relative;
+
+                .video-mask {
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    background-color: gray;
+
+                    video {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+
+                        &.p {
+                            display: none;
+                        }
+                    }
+                }
+
+                .video-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-end;
+
+                    .content-wrap {
+                        height: 200px;
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.3);
+
+                        .social-band {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+
+                            .branding {
+                                width: 50%;
+                                height: 100%;
+                                background-color: #ffffff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    width: 60%;
+                                    height: auto;
+                                }
+                            }
+
+                            .social-links {
+                                width: 50%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                .title {
+                                    h1 {
+                                        color: white;
+                                        font-family: "New York";
+                                        font-size: 50px;
+                                        text-align: center;
+                                    }
+                                }
+
+                                .links {
+                                    ul {
+                                        list-style: none;
+
+                                        li {
+                                            display: inline-flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            margin: 0 10px;
+                                            width: 40px;
+                                            height: 40px;
+                                            border-radius: 50%;
+                                            background-color: black;
+
+                                            .fab {
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.platform-show {
+            min-height: 70vh;
+            width: 100%;
+            background-image: url("../media/images/slide-bg.webp");
+            background-size: cover;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .logo {
+                width: 100%;
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 250px;
+                    height: auto;
+                }
+            }
+
+            .title-content {
+                padding: 0 0 30px 0;
+
+                .title {
+                    h1 {
+                        color: white;
+                        font-family: "New York";
+                        font-size: 7vw;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .divider {
+                height: 1px;
+                background-color: white;
+                width: 280px;
+            }
+        }
+
+        &.sales-marketing {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            background:
+                url("../media/images/concepts-branding.webp"),
+                url("../media/images/cicle-bg.webp"),
+                url("../media/images/texture-bg.webp");
+            background-repeat: repeat-y, no-repeat, no-repeat;
+            background-size: 80% auto, auto 80%, cover;
+            background-position: center top, center, center;
+
+            .content-wrap {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                z-index: 1;
+
+                .media-content {
+                    width: 45%;
+                    height: 100%;
+
+                    .wrap {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-end;
+
+                        img {
+                            width: 80%;
+                            height: auto;
+                        }
+                    }
+                }
+
+                .text-content {
+                    width: 55%;
+                    height: 100%;
+
+                    .wrap {
+                        margin-top: 100px;
+
+                        .title {
+                            h1 {
+                                color: white;
+                                font-family: "New York";
+                                font-size: 6rem;
+                                line-height: 5rem;
+                                width: 7ch;
+
+                                span {
+                                    font-family: "New York";
+                                    margin-left: 80px;
+                                }
+                            }
+                        }
+
+                        .desc {
+                            margin-left: 80px;
+                            margin-top: 40px;
+                            width: 300px;
+
+                            p {
+                                color: white;
+                                font-size: 1.2rem;
+                                max-height: 40vh;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .desk-patch {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 8%;
+                background-color: #EEEFF5;
+            }
+        }
+
+        &.branding-show {
+            min-height: 70vh;
+            width: 100%;
+            position: relative;
+            background-color: #0C0C0C;
+            background-image: url("../media/images/f-bubble-branding.webp");
+            background-size: auto 250px;
+            background-repeat: no-repeat;
+            background-position: 90% 70%;
+
+            .content-wrap {
+                .media-content {
+                    .wrap {
+                        width: fit-content;
+                        height: 60vh;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+                }
+
+                .text-content {
+                    margin-top: -40px;
+                    padding-bottom: 50px;
+
+                    .title {
+                        padding: 10px 0;
+
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7rem;
+                            line-height: 5rem;
+                            text-align: center;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 30px;
+                        padding: 10px 0;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        p {
+                            border-bottom: 1px solid white;
+                            padding-bottom: 30px;
+                            width: 40%;
+                            max-height: 40vh;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.pub-rel-services {
+            min-height: 20vh;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            position: relative;
+            background-color: #D4145A;
+
+            .content-wrap {
+                width: 40%;
+
+                .wrap {
+                    height: fit-content;
+                    margin-top: -26vh;
+                    width: 80%;
+
+                    .title-wrap {
+                        .title {
+                            h1 {
+                                font-family: "Nexa";
+                                font-weight: 700;
+                                color: #D4145A;
+                                font-size: 5rem;
+                                line-height: 4.5rem;
+                            }
+                        }
+                    }
+
+                    .text-content {
+                        .desc {
+                            height: 20vh;
+                            overflow-y: scroll;
+
+                            p {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.style-statement {
+            min-height: fit-content;
+            background-color: #D4145A;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .content-wrap {
+                min-height: 80vh;
+                width: 80%;
+                display: flex;
+                flex-direction: row-reverse;
+
+                .media-content {
+                    width: 60%;
+                    .wrap{
+                        width: 85%;
+                        display: flex;
+                        img{
+                            &.small{
+                                width: 45%;
+                                height: fit-content;
+                            }
+                            &.bg-blend{
+                                width: 75%;
+                                height: fit-content;
+                                mix-blend-mode: luminosity;
+                            }
+                        }
+                    }
+                }
+
+                .text-content {
+                    width: 40%;
+                    height: 100%;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    .wrapper{
+                        .title {
+                            h1 {
+                                font-family: "Nexa";
+                                font-weight: 700;
+                                font-size: 7vw;
+                                color: white;
+                                text-shadow: -5px 5px #D4145A;
+                            }
+                        }
+                        .desc{
+                            p{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1024px) {
+        section {
+            &.sales-marketing {
+                .content-wrap {
+                    .text-content {
+                        .wrap {
+                            .title {
+                                h1 {
+                                    color: white;
+                                    font-family: "New York";
+                                    font-size: 8vw;
+                                    line-height: 6vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.branding-show {
+                background-position: 100% 50%;
+                background-size: auto 150px;
+
+                .content-wrap {
+                    .media-content {
+                        .wrap {
+                            height: fit-content;
+
+                            img {
+                                height: fit-content;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .text-content {
+                        .title h1 {
+                            font-size: 15vw;
+                        }
+
+                        .desc {
+                            p {
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        section {
+            &.branding {
+                height: 150px;
+            }
+
+            &.intro {
+                .wrap {
+                    .title-content {
+                        .title {
+                            h1 {
+                                font-size: 3.8rem !important;
+                            }
+                        }
+                    }
+
+                    .body-content {
+
+                        .content-wrap {
+                            p {
+                                width: 90vw;
+                                margin-left: -120%;
+                                overflow-y: scroll;
+                            }
+                        }
+                    }
+                }
+
+                .media-content {
+                    min-height: fit-content;
+
+                    .wrap {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.platform-show .title-content .title h1 {
+                font-size: 2.7rem;
+            }
+
+            &.video .video-wrap .video-overlay .content-wrap {
+                height: unset;
+                min-height: 200px;
+
+                .social-band {
+                    flex-direction: column;
+
+                    .branding,
+                    .social-links {
+                        width: 100%;
+                        padding: 20px 0;
+                    }
+                }
+            }
+
+            &.sales-marketing {
+                background-size: 80% auto, auto 50%, cover;
+
+                .content-wrap {
+                    flex-direction: column-reverse;
+
+                    .text-content {
+                        width: 100%;
+
+                        .wrap {
+                            padding: 0 10px;
+
+                            .title {
+                                h1 {
+                                    width: 100%;
+                                    font-size: 3rem;
+                                    line-height: 2.5rem;
+
+                                    span {
+                                        margin-left: 0 !important;
+                                    }
+                                }
+                            }
+
+                            .desc {
+                                width: 80%;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
+                    .media-content {
+                        width: 100%;
+
+                        .wrap {
+                            img {
+                                width: 70%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.branding-show {
+                background-position: 100% 90%;
+
+                .content-wrap {
+                    .media-content {
+                        .wrap {
+                            height: fit-content;
+
+                            img {
+                                height: fit-content;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .text-content {
+                        .title h1 {
+                            font-size: 15vw;
+                        }
+
+                        .desc {
+                            p {
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.pub-rel-services {
+                min-height: 20vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+    
+                .content-wrap {
+                    width: 90%;
+                    &>.wrap {
+                        height: fit-content;
+                        margin-top: 0;
+                        width: 100%;
+                        padding: 20px 0;
+                        .title-wrap {
+                            .title {
+                                h1 {
+                                    color: #ffffff;
+                                    font-size: 3rem;
+                                    line-height: 3rem;
+                                }
+                            }
+                        }
+    
+                        .text-content {
+                            .desc {
+                                height: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &.style-statement {
+                min-height: fit-content;
+                background-color: #D4145A;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+    
+                .content-wrap {
+                    min-height: 80vh;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: row-reverse;
+    
+                    .media-content {
+                        width: 60%;
+                        .wrap{
+                            width: 85%;
+                            display: flex;
+                            img{
+                                &.small{
+                                    width: 45%;
+                                    height: fit-content;
+                                }
+                                &.bg-blend{
+                                    width: 75%;
+                                    height: fit-content;
+                                    mix-blend-mode: luminosity;
+                                }
+                            }
+                        }
+                    }
+    
+                    .text-content {
+                        width: 40%;
+                        height: 100%;
+                        z-index: 1;
+                        display: flex;
+                        align-items: center;
+                        .wrapper{
+                            .title {
+                                h1 {
+                                    font-family: "Nexa";
+                                    font-weight: 700;
+                                    font-size: 7vw;
+                                    color: white;
+                                    text-shadow: -5px 5px #D4145A;
+                                }
+                            }
+                            .desc{
+                                p{
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        section {
+            overflow: hidden;
+
+            &.branding {
+                height: 120px;
+
+                .logo-long {
+                    img {
+                        width: 90%;
+                        height: fit-content;
+                    }
+                }
+            }
+
+            &.branding-show {
+                background-position: 100% 90%;
+
+                .content-wrap {
+                    .media-content {
+                        .wrap {
+                            height: fit-content;
+
+                            img {
+                                height: fit-content;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .text-content {
+                        .title h1 {
+                            font-size: 15vw;
+                        }
+
+                        .desc {
+                            p {
+                                width: 90%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.pub-rel-services .title-wrap .title h1 {
+                font-size: 3rem;
+                line-height: 2.6rem;
+            }
+
+            &.style-statement {
+                min-height: fit-content;
+                background-color: #D4145A;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+    
+                .content-wrap {
+                    min-height: 80vh;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    .media-content,.text-content{
+                        width: 100%;
+                    }
+                    .text-content{
+                        .wrapper{
+                            .title{
+                                h1{
+                                    font-size: 2.7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

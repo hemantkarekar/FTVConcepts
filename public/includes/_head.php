@@ -1,22 +1,26 @@
-<!-- SITE TITTLE -->
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-slider.css">
-<!-- <link rel="stylesheet" href=".assets/css/style.css"> -->
-<!-- Font Awesome -->
-<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<script src="plugins//jQuery/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/a0b438cfb9.js" crossorigin="anonymous"></script>
-<!-- Owl Carousel -->
-<link href="plugins/slick-carousel/slick/slick.css" rel="stylesheet">
-<link href="plugins/slick-carousel/slick/slick-theme.css" rel="stylesheet">
-<!-- Fancy Box -->
-<link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
-<link href="plugins/jquery-nice-select/css/nice-select.css" rel="stylesheet">
-<!-- CUSTOM CSS -->
+    <!-- SITE TITTLE -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/site.webmanifest">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a0b438cfb9.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>

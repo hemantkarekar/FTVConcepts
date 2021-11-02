@@ -1,0 +1,378 @@
+main.micheladam {
+    section {
+        min-height: fit-content;
+
+        &.branding {
+            height: 200px;
+            background-color: #E23B3B;
+            background-image: url("../media/images/concepts-linear-branding.webp");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 80% auto;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px 0;
+
+            .logo-long {
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    max-width: auto;
+                }
+            }
+        }
+
+        &.video {
+            min-height: 50vh;
+
+            .video-wrap {
+                height: 70vh;
+                width: 100%;
+                overflow: hidden;
+                background-color: gray;
+
+                .video-mask {
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    background-color: gray;
+
+                    video {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        position: relative;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &.p {
+                            display: none;
+                        }
+
+                        &.md{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &.introduction {
+            min-height: 100vh;
+            width: 100%;
+            background: url("../media/images/concepts-branding.webp"), url("../media/images/micheladam-bg2.webp"), #000000;
+            background-size: auto 150px, cover, cover;
+            background-position: 10% 10%, top right;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: flex-end;
+
+            &>.content-wrap {
+                height: 60%;
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .role {
+                        h3 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        padding: 30px 0;
+                        border-top: 1px solid white;
+
+                        p {
+                            color: white;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.background {
+            min-height: 70vh;
+            width: 100%;
+            background: url("../media/images/concepts-branding.webp"), url("../media/images/micheladam- bg1.webp"), #1B1464;
+            background-size: auto 150px, cover, cover;
+            background-position: 10% 10%, top right;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: flex-end;
+
+            &>.content-wrap {
+                height: 60%;
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        padding: 30px 0;
+                        border-top: 1px solid white;
+
+                        p {
+                            color: white;
+                            font-size: 1.2rem;
+                            height: 60vh;
+                            overflow-y: scroll;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.journey {
+            min-height: 40vh;
+            background-color: #0C0C0C;
+            background-image: url("../media/images/concepts-branding.webp");
+            background-repeat: repeat-y;
+            background-position: center top;
+            background-size: 60% auto;
+            background-blend-mode: screen;
+
+            .content-wrap {
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        padding: 30px 0;
+                        border-top: 1px solid white;
+
+                        p {
+                            color: white;
+                            font-size: 1.2rem;
+                            height: 60vh;
+                            overflow-y: scroll;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.future {
+            min-height: 40vh;
+            background-color: #D4145A;
+
+            .content-wrap {
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        padding: 30px 0;
+                        border-top: 1px solid white;
+
+                        p {
+                            color: white;
+                            font-size: 1.2rem;
+                            height: 60vh;
+                            overflow-y: scroll;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.message {
+            min-height: 40vh;
+            background-color: #1B1464;
+
+            .content-wrap {
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        padding: 30px 0 10px 0;
+                        border-top: 1px solid white;
+
+                        p {
+                            color: white;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1024px) {
+        section {
+            &.introduction {
+                &>.content-wrap {
+                    .text-wrap {
+                        .desc {
+                            p {
+                                color: white;
+                                font-size: 1.2rem;
+                                height: 40vh;
+                                margin-left: -90%;
+                                overflow-y: scroll;
+                                width: 90vw;
+                            }
+                        }
+                        .role {
+                            width: 90vw;
+                            margin-left: -90%;
+
+                            h3 {
+                                font-size: 4rem;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.background {
+                &>.content-wrap {
+                    .text-wrap {
+                        .desc {
+                            p {
+                                color: white;
+                                font-size: 1.2rem;
+                                height: 40vh;
+                                margin-left: -90%;
+                                overflow-y: scroll;
+                                width: 90vw;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.journey, &.future, &.message{
+                &>.content-wrap {
+                    .text-wrap {
+                        .desc {
+                            p {
+                                color: white;
+                                font-size: 1.2rem;
+                                height: 40vh;
+                                margin-left: -90%;
+                                overflow-y: scroll;
+                                width: 90vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {}
+
+    @media screen and (max-width:425px) {
+        section{
+            overflow: hidden;
+            &.branding {
+                height: 120px;
+
+                .logo-long {
+                    img {
+                        width: 90%;
+                        height: fit-content;
+                    }
+                }
+            }
+            &.introduction > .content-wrap .text-wrap{
+                .role h3 {
+                    font-size: 2.7rem;
+                }
+                .title h1 {
+                    color: white;
+                    font-family: "New York";
+                    font-size: 2rem;
+                    margin-left: -50%;
+                }
+                .desc p{
+                    font-size: 15px;
+                }
+            }
+            &.background, &.journey, &.future, &.message{
+                &> .content-wrap .text-wrap{
+                    .title h1 {
+                        font-size: 2.7rem;
+                        margin-left: -80%;
+                        text-align: center;
+                    }
+                    .desc p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

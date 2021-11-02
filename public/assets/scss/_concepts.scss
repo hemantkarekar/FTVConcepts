@@ -1,0 +1,411 @@
+main.concepts {
+    section {
+        min-height: fit-content;
+
+        &.branding {
+            height: 200px;
+            background-color: #E23B3B;
+            background-image: url("../media/images/concepts-linear-branding.webp");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 80% auto;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px 0;
+
+            .logo-long {
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    max-width: auto;
+                }
+            }
+        }
+
+        &.video {
+            min-height: 50vh;
+
+            .video-wrap {
+                height: 70vh;
+                width: 100%;
+                overflow: hidden;
+                background-color: gray;
+
+                video {
+                    &.md {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.introduction {
+            min-height: 100vh;
+            width: 100%;
+
+            .video-wrap {
+                height: 100vh;
+                width: 100%;
+                position: relative;
+
+                .video-mask {
+                    height: 100%;
+                    width: 100%;
+                    background-color: gray;
+                    overflow: hidden;
+
+                    video {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .video-overlay {
+                    position: absolute;
+                    height: 100vh;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: flex-end;
+                    background-color: rgba(0, 0, 0, 0.5);
+
+                    .content-wrap {
+                        height: 60%;
+                        width: 100%;
+
+                        .text-wrap {
+                            width: 40%;
+                            margin-left: 40%;
+
+                            .role {
+                                h3 {
+                                    color: white;
+                                    font-family: "New York";
+                                    font-size: 2rem;
+                                }
+                            }
+
+                            .title {
+                                h1 {
+                                    color: white;
+                                    font-family: "New York";
+                                    font-size: 7vw;
+                                    margin-left: -20%;
+                                }
+                            }
+
+                            .desc {
+                                margin-top: 20px;
+                                padding: 30px 0;
+                                border-top: 1px solid white;
+
+                                p {
+                                    color: white;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.potential {
+            min-height: 90vh;
+            width: 100%;
+            background: url("../media/images/concepts-branding.webp"), url("../media/images/keyfacts-bg1.webp"), #1B1464;
+            background-size: auto 150px, cover, cover;
+            background-position: 10% 10%, bottom left;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            display: flex;
+            align-items: flex-end;
+
+            &>.content-wrap {
+                height: 60%;
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+                    padding: 30px 0;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        padding: 30px 0;
+                        border-top: 1px solid white;
+                        height: 60vh;
+                        overflow-y: scroll;
+
+                        ul {
+                            li {
+                                color: white;
+                                font-size: 1.2rem;
+                                display: flex;
+
+                                &::before {
+                                    content: '●';
+                                    display: block;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.mission-vision {
+            background-color: #D4145A;
+            min-height: 100vh;
+            position: relative;
+
+            .title-content {
+                position: absolute;
+                height: fit-content;
+                width: 100%;
+                bottom: 50vh;
+                left: 0;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+
+                .title {
+                    width: 90%;
+                    padding: 30px 0;
+                    position: absolute;
+
+                    h1 {
+                        font-family: "Nexa";
+                        text-transform: uppercase;
+                        color: white;
+                        font-size: 3.5rem;
+                        font-weight: 700;
+                        line-height: 3rem;
+
+                        span {
+                            font-family: "Nexa";
+                            font-weight: 700;
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .swiper {
+                width: 100%;
+                min-height: fit-content;
+                z-index: 0;
+                background-image: url("../media/images/mva-bg.webp");
+                background-color: rgba(0, 0, 0, 0.6);
+                background-size: cover;
+                background-blend-mode: overlay;
+                background-position: top center;
+
+                .swiper-wrapper {
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        height: 100vh;
+
+                        /* Center slide text vertically */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .content-wrap {
+                            height: 100%;
+                            display: flex;
+                            align-items: flex-end;
+                        }
+
+                    }
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    color: #ffffff;
+                    font-weight: bold;
+                }
+
+                .swiper-pagination-bullet {
+                    background-color: rgba(255, 255, 255, 0.4);
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: #ffffff;
+                }
+            }
+
+            .content-wrap {
+                padding: 40px 0;
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .text-wrap {
+                    width: 100%;
+                    display: flex;
+
+                    .title {
+                        width: 40%;
+
+                        h1 {
+                            color: white;
+                            font-family: "Nexa";
+                            font-weight: 700;
+                            font-size: 9vw;
+                        }
+                    }
+
+                    .desc {
+                        color: white;
+                        text-align: left;
+                        width: 60%;
+                        padding: 30px 0;
+                        p {
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        section {
+            &.introduction {
+                .video-wrap {
+                    .video-overlay {
+                        .content-wrap {
+                            width: 100%;
+                            height: fit-content;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            justify-content: center;
+
+                            .text-wrap {
+                                width: 90%;
+                                margin-left: 0;
+                                padding-top: 20px;
+
+                                .title {
+                                    h1 {
+                                        font-size: 2.9rem;
+                                        margin: 0;
+                                    }
+                                }
+
+                                .desc {
+                                    margin-top: 10px;
+                                    padding: 20px 0;
+
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.potential {
+                .content-wrap {
+                    display: flex;
+                    justify-content: center;
+                    height: 70vh;
+
+                    .text-wrap {
+                        width: 90%;
+                        margin-left: 0;
+
+                        .title {
+                            h1 {
+                                margin-left: 0;
+                            }
+                        }
+
+                        .desc {
+                            height: 40vh;
+                            overflow-y: scroll;
+
+                            p {}
+                        }
+                    }
+                }
+            }
+
+            &.mission-vision{
+                .content-wrap{
+                    .text-wrap{
+                        flex-direction: column;
+                        .desc{
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:425px) {
+        section{
+            &.potential {
+                .content-wrap {
+                    display: flex;
+                    justify-content: center;
+                    height: 70vh;
+
+                    .text-wrap {
+                        width: 90%;
+                        margin-left: 0;
+
+                        .title {
+                            h1 {
+                                margin-left: 0;
+                                font-size: 2.7rem;
+                            }
+                        }
+
+                        .desc {
+                            height: 40vh;
+                            overflow-y: scroll;
+
+                            ul li {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.mission-vision{
+                .title-content{
+                    bottom: 60vh;
+                    .title{
+                        padding: 0;
+                        h1{
+                            font-size: 2.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

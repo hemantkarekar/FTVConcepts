@@ -70,6 +70,11 @@
 
 @font-face {
     font-family: "Nexa";
+    src: url("/assets/fonts/NexaLight.otf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Nexa";
     src: url("/assets/fonts/Nexa Bold.otf");
     font-weight: 500;
 }
@@ -77,11 +82,6 @@
     font-family: "Nexa";
     src: url("/assets/fonts/NexaBold.otf");
     font-weight: 700;
-}
-@font-face {
-    font-family: "Nexa";
-    src: url("/assets/fonts/NexaLight.otf");
-    font-weight: 300;
 }
 
 @font-face {

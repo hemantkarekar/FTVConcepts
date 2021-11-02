@@ -1,0 +1,344 @@
+main.kashiffkhan {
+    section {
+        min-height: fit-content;
+
+        &.branding {
+            height: 200px;
+            background-color: #E23B3B;
+            background-image: url("../media/images/concepts-linear-branding.webp");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 80% auto;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px 0;
+
+            .logo-long {
+                height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    max-width: auto;
+                }
+            }
+        }
+
+        &.video {
+            min-height: 50vh;
+
+            .video-wrap {
+                height: 70vh;
+                width: 100%;
+                .video-mask {
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    background-color: gray;
+
+                    video {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        position: relative;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &.p {
+                            display: none;
+                        }
+
+                        &.md{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &.introduction {
+            min-height: 100vh;
+            width: 100%;
+            background: url("../media/images/concepts-branding.webp"), url("../media/images/kashiffkhan-bg1.webp"), #000000;
+            background-size: auto 150px, cover, cover;
+            background-position: 10% 10%, top center, top right;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: flex-end;
+
+            &>.content-wrap {
+                height: 60%;
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .role {
+                        h3 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        margin: 10px 0;
+                        border-top: 1px solid white;
+                        height: 30vh;
+
+                        p {
+                            height: 80%;
+                            overflow-y: scroll;
+                            margin: 20px 0;
+                            color: white;
+                            font-size: 1.2rem;
+                        }
+
+                        ul {
+                            li {
+                                color: white;
+                                font-size: 1.2rem;
+                                display: flex;
+
+                                &::before {
+                                    content: '●';
+                                    display: block;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.background {
+            min-height: 70vh;
+            width: 100%;
+            background: url("../media/images/concepts-branding.webp"), #1B1464;
+            background-size: auto 150px, cover;
+            background-position: 10% 5%, top right;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: flex-end;
+
+            &>.content-wrap {
+                height: 60%;
+                width: 100%;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        margin: 10px 0;
+                        border-top: 1px solid white;
+                        height: 35vh;
+
+                        p {
+                            height: 80%;
+                            overflow-y: scroll;
+                            margin: 20px 0;
+                            color: white;
+                            font-size: 1.2rem;
+
+                            span {
+                                font-weight: bold;
+                                padding-right: 10px;
+                            }
+                        }
+
+                        ul {
+                            li {
+                                color: white;
+                                font-size: 1.2rem;
+                                display: flex;
+
+                                &::before {
+                                    content: '●';
+                                    display: block;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.journey {
+            min-height: 40vh;
+            background-color: #0C0C0C;
+            background-image: url("../media/images/concepts-branding.webp");
+            background-repeat: repeat-y;
+            background-position: center top;
+            background-size: 60% auto;
+            background-blend-mode: screen;
+
+            .content-wrap {
+                width: 100%;
+                padding: 40px 0;
+
+                .text-wrap {
+                    width: 40%;
+                    margin-left: 40%;
+
+                    .title {
+                        h1 {
+                            color: white;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            margin-left: -20%;
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                        border-top: 1px solid white;
+                        height: 30vh;
+
+                        p {
+                            height: 80%;
+                            overflow-y: scroll;
+                            margin: 20px 0;
+                            color: white;
+                            font-size: 1.2rem;
+
+                            span {
+                                font-weight: bold;
+                                padding-right: 10px;
+                            }
+                        }
+
+                        ul {
+                            li {
+                                color: white;
+                                font-size: 1.2rem;
+                                display: flex;
+
+                                &::before {
+                                    content: '●';
+                                    display: block;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width:1024px) {}
+
+    @media screen and (max-width:768px) {
+        section {
+            &.introduction>.content-wrap {
+                display: flex;
+                height: 60vh;
+                width: 100%;
+                justify-content: center;
+
+                .text-wrap {
+                    width: 50%;
+                    margin: 0;
+                    padding: 10px;
+
+                    .desc {
+                        height: fit-content;
+                        padding: 10px 0;
+
+                        p {
+                            height: 30vh;
+                            width: 100%;
+                            margin: 0 !important;
+                        }
+                    }
+
+                    .title {
+                        h1 {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            &.introduction, &.background, &.journey{
+                .content-wrap {
+                    display: flex;
+                    height: 60vh;
+                    width: 100%;
+                    justify-content: center;
+    
+                    .text-wrap {
+                        width: 50%;
+                        margin-left: 0;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width:425px) {
+        section{
+            overflow: hidden;
+            &.branding {
+                height: 120px;
+
+                .logo-long {
+                    img {
+                        width: 90%;
+                        height: fit-content;
+                    }
+                }
+            }
+            &.introduction, &.background, &.journey{
+                .content-wrap{
+                    .text-wrap{
+                        width: 100%;
+                        .role h3 {
+                            font-size: 1.5rem;
+                        }                        
+                        .title{
+                            h1{
+                                margin: 0;
+                                font-size: 2.7rem;
+                            }
+                        }
+                        .desc{
+                            p{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

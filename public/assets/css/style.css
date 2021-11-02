@@ -1,4 +1,5311 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins";
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Bodoni 72";
+  src: url("/assets/fonts/Bodoni 72.ttc");
+}
+
+@font-face {
+  font-family: "Bodoni Book";
+  src: url("/assets/fonts/Bodoni Book.otf");
+}
+
+@font-face {
+  font-family: "Erotique Alternate Trial Bold";
+  src: url("/assets/fonts/ErotiqueAlternateTrial-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham-Thin.otf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/GothamBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  src: url("/assets/fonts/GothamBook.ttf");
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/GothamLight.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Kelson";
+  src: url("/assets/fonts/kelson_rg.otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("/assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 700;
+  src: url("/assets/fonts/MyriadPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  src: url("/assets/fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "New York";
+  src: url("/assets/fonts/NewYork.otf");
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/assets/fonts/NexaLight.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/assets/fonts/Nexa Bold.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Nexa";
+  src: url("/assets/fonts/NexaBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Rossanova";
+  src: url("/assets/fonts/Rossanova-Regular.otf");
+}
+
+main {
+  padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(187, 33, 43, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.753);
+  border-radius: 2px;
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+footer {
+  background-color: black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .main-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  padding: 30px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+footer .main-wrap .links-copy {
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .main-wrap .links-copy .links span a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .main-wrap .links-copy .links span:not(:first-child) a::before {
+  content: "|";
+  padding: 0 5px;
+}
+
+footer .main-wrap .links-copy .copyright p {
+  color: #969696;
+}
+
+footer .main-wrap .links-copy .copyright p a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer .main-wrap .subs-socials {
+  min-height: 80px;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+footer .main-wrap .subs-socials .subscribe {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer .main-wrap .subs-socials .subscribe .title h1 {
+  font-family: "Rossanova";
+  color: white;
+  font-size: 3vw;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 425px) {
+  footer .main-wrap .subs-socials .subscribe .title h1 {
+    font-size: 20px !important;
+  }
+}
+
+footer .main-wrap .subs-socials .subscribe .subs-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  font-size: 16px;
+}
+
+footer .main-wrap .subs-socials .subscribe .subs-form form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 10px;
+  background: none;
+  border: none;
+  outline: none;
+  border: 1px solid #8b8b8b;
+}
+
+footer .main-wrap .subs-socials .subscribe .subs-form form button {
+  width: 90px;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #8b8b8b;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+}
+
+footer .main-wrap .subs-socials .socials {
+  width: 90px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .main-wrap .subs-socials .socials .links-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 5px;
+}
+
+footer .main-wrap .subs-socials .socials .links-wrap .link {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 50%;
+}
+
+footer .main-wrap .subs-socials .socials .links-wrap .link a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+footer .main-wrap .subs-socials .socials .links-wrap .link:nth-child(1):hover {
+  background-color: white;
+}
+
+footer .main-wrap .branding {
+  min-height: 80px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .main-wrap .branding .logo {
+  width: 100%;
+  border-left: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .main-wrap .branding .logo svg {
+  height: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  footer .main-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .main-wrap .links-copy {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer .main-wrap .links-copy .links,
+  footer .main-wrap .links-copy .copyright {
+    text-align: center;
+  }
+  footer .main-wrap .subs-socials {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .main-wrap .subs-socials .subscribe .title h1 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  footer .main-wrap .subs-socials .socials {
+    width: 100%;
+  }
+  footer .main-wrap .subs-socials .socials .links-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .main-wrap .branding {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    min-height: 80px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .main-wrap .branding .logo {
+    width: 100%;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .main-wrap .branding .logo svg {
+    height: 80px;
+  }
+}
+
 main {
   font-family: "MyriadPro";
   font-weight: 600;
+}
+
+main.index section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.index section.branding {
+  height: 200px;
+  background-color: #E23B3B;
+  background-image: url("../media/images/concepts-linear-branding.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 0;
+}
+
+main.index section.branding .logo-long {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.index section.branding .logo-long img {
+  height: 100%;
+  max-width: auto;
+}
+
+main.index section.intro {
+  min-height: 50vh;
+  background: url("../media/images/intro-bg.webp"), black;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+main.index section.intro .wrap .title-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 8vw;
+  text-align: center;
+}
+
+main.index section.intro .wrap .body-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0 10 0;
+}
+
+main.index section.intro .wrap .body-content .content-wrap {
+  width: 25%;
+  border-top: 1px solid white;
+  padding: 10px 0;
+}
+
+main.index section.intro .wrap .body-content .content-wrap p {
+  width: 70vw;
+  margin-left: -100%;
+  color: white;
+  max-height: 40vh;
+}
+
+main.index section.intro .media-content {
+  width: 100%;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.index section.intro .media-content .wrap {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+main.index section.intro .media-content .wrap img {
+  width: 100%;
+  height: auto;
+}
+
+main.index section.video {
+  min-height: 50vh;
+  width: 100%;
+}
+
+main.index section.video .video-wrap {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+main.index section.video .video-wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.index section.video .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main.index section.video .video-wrap .video-mask video.p {
+  display: none;
+}
+
+main.index section.video .video-wrap .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap {
+  height: 200px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .branding {
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .branding img {
+  width: 60%;
+  height: auto;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .social-links {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 50px;
+  text-align: center;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .links ul {
+  list-style: none;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .links ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+main.index section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .links ul li .fab {
+  color: white;
+}
+
+main.index section.platform-show {
+  min-height: 70vh;
+  width: 100%;
+  background-image: url("../media/images/slide-bg.webp");
+  background-size: cover;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.index section.platform-show .logo {
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.index section.platform-show .logo img {
+  width: 250px;
+  height: auto;
+}
+
+main.index section.platform-show .title-content {
+  padding: 0 0 30px 0;
+}
+
+main.index section.platform-show .title-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  text-align: center;
+}
+
+main.index section.platform-show .divider {
+  height: 1px;
+  background-color: white;
+  width: 280px;
+}
+
+main.index section.sales-marketing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/cicle-bg.webp"), url("../media/images/texture-bg.webp");
+  background-repeat: repeat-y, no-repeat, no-repeat;
+  background-size: 80% auto, auto 80%, cover;
+  background-position: center top, center, center;
+}
+
+main.index section.sales-marketing .content-wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+main.index section.sales-marketing .content-wrap .media-content {
+  width: 45%;
+  height: 100%;
+}
+
+main.index section.sales-marketing .content-wrap .media-content .wrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.index section.sales-marketing .content-wrap .media-content .wrap img {
+  width: 80%;
+  height: auto;
+}
+
+main.index section.sales-marketing .content-wrap .text-content {
+  width: 55%;
+  height: 100%;
+}
+
+main.index section.sales-marketing .content-wrap .text-content .wrap {
+  margin-top: 100px;
+}
+
+main.index section.sales-marketing .content-wrap .text-content .wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 6rem;
+  line-height: 5rem;
+  width: 7ch;
+}
+
+main.index section.sales-marketing .content-wrap .text-content .wrap .title h1 span {
+  font-family: "New York";
+  margin-left: 80px;
+}
+
+main.index section.sales-marketing .content-wrap .text-content .wrap .desc {
+  margin-left: 80px;
+  margin-top: 40px;
+  width: 300px;
+}
+
+main.index section.sales-marketing .content-wrap .text-content .wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+  max-height: 40vh;
+}
+
+main.index section.sales-marketing .desk-patch {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  background-color: #EEEFF5;
+}
+
+main.index section.branding-show {
+  min-height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: #0C0C0C;
+  background-image: url("../media/images/f-bubble-branding.webp");
+  background-size: auto 250px;
+  background-repeat: no-repeat;
+  background-position: 90% 70%;
+}
+
+main.index section.branding-show .content-wrap .media-content .wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.index section.branding-show .content-wrap .media-content .wrap img {
+  height: 100%;
+  width: auto;
+}
+
+main.index section.branding-show .content-wrap .text-content {
+  margin-top: -40px;
+  padding-bottom: 50px;
+}
+
+main.index section.branding-show .content-wrap .text-content .title {
+  padding: 10px 0;
+}
+
+main.index section.branding-show .content-wrap .text-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7rem;
+  line-height: 5rem;
+  text-align: center;
+}
+
+main.index section.branding-show .content-wrap .text-content .desc {
+  margin-top: 30px;
+  padding: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.index section.branding-show .content-wrap .text-content .desc p {
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+  width: 40%;
+  max-height: 40vh;
+  color: white;
+}
+
+main.index section.pub-rel-services {
+  min-height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: #0C0C0C;
+}
+
+main.index section.pub-rel-services .title-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+main.index section.pub-rel-services .title-wrap .title {
+  width: 80%;
+}
+
+main.index section.pub-rel-services .title-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 11vw;
+  line-height: 8.5vw;
+  text-align: right;
+}
+
+main.index section.pub-rel-services .content-wrap {
+  width: 100%;
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap .media-content {
+  margin-top: -20vh;
+  width: 40%;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap .media-content .wrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap .media-content .wrap img {
+  width: 100%;
+  height: auto;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap .text-content {
+  width: 60%;
+  padding: 50px 10px 30px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap .text-content .desc {
+  width: 50%;
+}
+
+main.index section.pub-rel-services .content-wrap .wrap .text-content .desc p {
+  color: white;
+  max-height: 40vh;
+}
+
+@media screen and (max-width: 1024px) {
+  main.index section.sales-marketing .content-wrap .text-content .wrap .title h1 {
+    color: white;
+    font-family: "New York";
+    font-size: 8vw;
+    line-height: 6vw;
+  }
+  main.index section.branding-show {
+    background-position: 100% 50%;
+    background-size: auto 150px;
+  }
+  main.index section.branding-show .content-wrap .media-content .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.index section.branding-show .content-wrap .media-content .wrap img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  main.index section.branding-show .content-wrap .text-content .title h1 {
+    font-size: 15vw;
+  }
+  main.index section.branding-show .content-wrap .text-content .desc p {
+    width: 60%;
+  }
+  main.index section.pub-rel-services .content-wrap .wrap .text-content .desc {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main.index section.branding {
+    height: 150px;
+  }
+  main.index section.intro .wrap .title-content .title h1 {
+    font-size: 3.8rem !important;
+  }
+  main.index section.intro .wrap .body-content .content-wrap p {
+    width: 90vw;
+    margin-left: -120%;
+    overflow-y: scroll;
+  }
+  main.index section.intro .media-content {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  main.index section.intro .media-content .wrap {
+    width: 100%;
+  }
+  main.index section.platform-show .title-content .title h1 {
+    font-size: 2.7rem;
+  }
+  main.index section.video .video-wrap .video-overlay .content-wrap {
+    height: unset;
+    min-height: 200px;
+  }
+  main.index section.video .video-wrap .video-overlay .content-wrap .social-band {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main.index section.video .video-wrap .video-overlay .content-wrap .social-band .branding,
+  main.index section.video .video-wrap .video-overlay .content-wrap .social-band .social-links {
+    width: 100%;
+    padding: 20px 0;
+  }
+  main.index section.sales-marketing {
+    background-size: 80% auto, auto 50%, cover;
+  }
+  main.index section.sales-marketing .content-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main.index section.sales-marketing .content-wrap .text-content {
+    width: 100%;
+  }
+  main.index section.sales-marketing .content-wrap .text-content .wrap {
+    padding: 0 10px;
+  }
+  main.index section.sales-marketing .content-wrap .text-content .wrap .title h1 {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  main.index section.sales-marketing .content-wrap .text-content .wrap .title h1 span {
+    margin-left: 0 !important;
+  }
+  main.index section.sales-marketing .content-wrap .text-content .wrap .desc {
+    width: 80%;
+    margin-left: 0;
+  }
+  main.index section.sales-marketing .content-wrap .media-content {
+    width: 100%;
+  }
+  main.index section.sales-marketing .content-wrap .media-content .wrap img {
+    width: 70%;
+    height: auto;
+  }
+  main.index section.branding-show {
+    background-position: 100% 90%;
+  }
+  main.index section.branding-show .content-wrap .media-content .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.index section.branding-show .content-wrap .media-content .wrap img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  main.index section.branding-show .content-wrap .text-content .title h1 {
+    font-size: 15vw;
+  }
+  main.index section.branding-show .content-wrap .text-content .desc p {
+    width: 60%;
+  }
+  main.index section.pub-rel-services .content-wrap .wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main.index section.pub-rel-services .content-wrap .wrap .media-content,
+  main.index section.pub-rel-services .content-wrap .wrap .text-content {
+    width: 100%;
+  }
+  main.index section.pub-rel-services .content-wrap .wrap .media-content {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.index section.pub-rel-services .content-wrap .wrap .media-content .wrap {
+    width: 300px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.index section {
+    overflow: hidden;
+  }
+  main.index section.branding {
+    height: 120px;
+  }
+  main.index section.branding .logo-long img {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.index section.branding-show {
+    background-position: 100% 90%;
+  }
+  main.index section.branding-show .content-wrap .media-content .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.index section.branding-show .content-wrap .media-content .wrap img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  main.index section.branding-show .content-wrap .text-content .title h1 {
+    font-size: 15vw;
+  }
+  main.index section.branding-show .content-wrap .text-content .desc p {
+    width: 90%;
+  }
+  main.index section.pub-rel-services .title-wrap .title h1 {
+    font-size: 3rem;
+    line-height: 2.6rem;
+  }
+}
+
+main.micheladam section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.micheladam section.branding {
+  height: 200px;
+  background-color: #E23B3B;
+  background-image: url("../media/images/concepts-linear-branding.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 0;
+}
+
+main.micheladam section.branding .logo-long {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.micheladam section.branding .logo-long img {
+  height: 100%;
+  max-width: auto;
+}
+
+main.micheladam section.video {
+  min-height: 50vh;
+}
+
+main.micheladam section.video .video-wrap {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.micheladam section.video .video-wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.micheladam section.video .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main.micheladam section.video .video-wrap .video-mask video.p {
+  display: none;
+}
+
+main.micheladam section.video .video-wrap .video-mask video.md {
+  display: none;
+}
+
+main.micheladam section.introduction {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/micheladam-bg2.webp"), #000000;
+  background-size: auto 150px, cover, cover;
+  background-position: 10% 10%, top right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.micheladam section.introduction > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.micheladam section.introduction > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.micheladam section.introduction > .content-wrap .text-wrap .role h3 {
+  color: white;
+  font-family: "New York";
+  font-size: 2rem;
+}
+
+main.micheladam section.introduction > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.micheladam section.introduction > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+}
+
+main.micheladam section.introduction > .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.micheladam section.background {
+  min-height: 70vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/micheladam- bg1.webp"), #1B1464;
+  background-size: auto 150px, cover, cover;
+  background-position: 10% 10%, top right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.micheladam section.background > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.micheladam section.background > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.micheladam section.background > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.micheladam section.background > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+}
+
+main.micheladam section.background > .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+main.micheladam section.journey {
+  min-height: 40vh;
+  background-color: #0C0C0C;
+  background-image: url("../media/images/concepts-branding.webp");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 60% auto;
+  background-blend-mode: screen;
+}
+
+main.micheladam section.journey .content-wrap {
+  width: 100%;
+}
+
+main.micheladam section.journey .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.micheladam section.journey .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.micheladam section.journey .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+}
+
+main.micheladam section.journey .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+main.micheladam section.future {
+  min-height: 40vh;
+  background-color: #D4145A;
+}
+
+main.micheladam section.future .content-wrap {
+  width: 100%;
+}
+
+main.micheladam section.future .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.micheladam section.future .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.micheladam section.future .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+}
+
+main.micheladam section.future .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+main.micheladam section.message {
+  min-height: 40vh;
+  background-color: #1B1464;
+}
+
+main.micheladam section.message .content-wrap {
+  width: 100%;
+}
+
+main.micheladam section.message .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.micheladam section.message .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.micheladam section.message .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0 10px 0;
+  border-top: 1px solid white;
+}
+
+main.micheladam section.message .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  main.micheladam section.introduction > .content-wrap .text-wrap .desc p {
+    color: white;
+    font-size: 1.2rem;
+    height: 40vh;
+    margin-left: -90%;
+    overflow-y: scroll;
+    width: 90vw;
+  }
+  main.micheladam section.introduction > .content-wrap .text-wrap .role {
+    width: 90vw;
+    margin-left: -90%;
+  }
+  main.micheladam section.introduction > .content-wrap .text-wrap .role h3 {
+    font-size: 4rem;
+  }
+  main.micheladam section.background > .content-wrap .text-wrap .desc p {
+    color: white;
+    font-size: 1.2rem;
+    height: 40vh;
+    margin-left: -90%;
+    overflow-y: scroll;
+    width: 90vw;
+  }
+  main.micheladam section.journey > .content-wrap .text-wrap .desc p, main.micheladam section.future > .content-wrap .text-wrap .desc p, main.micheladam section.message > .content-wrap .text-wrap .desc p {
+    color: white;
+    font-size: 1.2rem;
+    height: 40vh;
+    margin-left: -90%;
+    overflow-y: scroll;
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.micheladam section {
+    overflow: hidden;
+  }
+  main.micheladam section.branding {
+    height: 120px;
+  }
+  main.micheladam section.branding .logo-long img {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.micheladam section.introduction > .content-wrap .text-wrap .role h3 {
+    font-size: 2.7rem;
+  }
+  main.micheladam section.introduction > .content-wrap .text-wrap .title h1 {
+    color: white;
+    font-family: "New York";
+    font-size: 2rem;
+    margin-left: -50%;
+  }
+  main.micheladam section.introduction > .content-wrap .text-wrap .desc p {
+    font-size: 15px;
+  }
+  main.micheladam section.background > .content-wrap .text-wrap .title h1, main.micheladam section.journey > .content-wrap .text-wrap .title h1, main.micheladam section.future > .content-wrap .text-wrap .title h1, main.micheladam section.message > .content-wrap .text-wrap .title h1 {
+    font-size: 2.7rem;
+    margin-left: -80%;
+    text-align: center;
+  }
+  main.micheladam section.background > .content-wrap .text-wrap .desc p, main.micheladam section.journey > .content-wrap .text-wrap .desc p, main.micheladam section.future > .content-wrap .text-wrap .desc p, main.micheladam section.message > .content-wrap .text-wrap .desc p {
+    font-size: 15px;
+  }
+}
+
+main.kashiffkhan section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.kashiffkhan section.branding {
+  height: 200px;
+  background-color: #E23B3B;
+  background-image: url("../media/images/concepts-linear-branding.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 0;
+}
+
+main.kashiffkhan section.branding .logo-long {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.kashiffkhan section.branding .logo-long img {
+  height: 100%;
+  max-width: auto;
+}
+
+main.kashiffkhan section.video {
+  min-height: 50vh;
+}
+
+main.kashiffkhan section.video .video-wrap {
+  height: 70vh;
+  width: 100%;
+}
+
+main.kashiffkhan section.video .video-wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.kashiffkhan section.video .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main.kashiffkhan section.video .video-wrap .video-mask video.p {
+  display: none;
+}
+
+main.kashiffkhan section.video .video-wrap .video-mask video.md {
+  display: none;
+}
+
+main.kashiffkhan section.introduction {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/kashiffkhan-bg1.webp"), #000000;
+  background-size: auto 150px, cover, cover;
+  background-position: 10% 10%, top center, top right;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.kashiffkhan section.introduction > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap .role h3 {
+  color: white;
+  font-family: "New York";
+  font-size: 2rem;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  margin: 10px 0;
+  border-top: 1px solid white;
+  height: 30vh;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap .desc p {
+  height: 80%;
+  overflow-y: scroll;
+  margin: 20px 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.kashiffkhan section.introduction > .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.kashiffkhan section.background {
+  min-height: 70vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), #1B1464;
+  background-size: auto 150px, cover;
+  background-position: 10% 5%, top right;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.kashiffkhan section.background > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  margin: 10px 0;
+  border-top: 1px solid white;
+  height: 35vh;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap .desc p {
+  height: 80%;
+  overflow-y: scroll;
+  margin: 20px 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap .desc p span {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.kashiffkhan section.background > .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.kashiffkhan section.journey {
+  min-height: 40vh;
+  background-color: #0C0C0C;
+  background-image: url("../media/images/concepts-branding.webp");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 60% auto;
+  background-blend-mode: screen;
+}
+
+main.kashiffkhan section.journey .content-wrap {
+  width: 100%;
+  padding: 40px 0;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  height: 30vh;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap .desc p {
+  height: 80%;
+  overflow-y: scroll;
+  margin: 20px 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap .desc p span {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.kashiffkhan section.journey .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  main.kashiffkhan section.introduction > .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.kashiffkhan section.introduction > .content-wrap .text-wrap {
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+  }
+  main.kashiffkhan section.introduction > .content-wrap .text-wrap .desc {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 0;
+  }
+  main.kashiffkhan section.introduction > .content-wrap .text-wrap .desc p {
+    height: 30vh;
+    width: 100%;
+    margin: 0 !important;
+  }
+  main.kashiffkhan section.introduction > .content-wrap .text-wrap .title h1 {
+    margin: 0;
+  }
+  main.kashiffkhan section.introduction .content-wrap, main.kashiffkhan section.background .content-wrap, main.kashiffkhan section.journey .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.kashiffkhan section.introduction .content-wrap .text-wrap, main.kashiffkhan section.background .content-wrap .text-wrap, main.kashiffkhan section.journey .content-wrap .text-wrap {
+    width: 50%;
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.kashiffkhan section {
+    overflow: hidden;
+  }
+  main.kashiffkhan section.branding {
+    height: 120px;
+  }
+  main.kashiffkhan section.branding .logo-long img {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.kashiffkhan section.introduction .content-wrap .text-wrap, main.kashiffkhan section.background .content-wrap .text-wrap, main.kashiffkhan section.journey .content-wrap .text-wrap {
+    width: 100%;
+  }
+  main.kashiffkhan section.introduction .content-wrap .text-wrap .role h3, main.kashiffkhan section.background .content-wrap .text-wrap .role h3, main.kashiffkhan section.journey .content-wrap .text-wrap .role h3 {
+    font-size: 1.5rem;
+  }
+  main.kashiffkhan section.introduction .content-wrap .text-wrap .title h1, main.kashiffkhan section.background .content-wrap .text-wrap .title h1, main.kashiffkhan section.journey .content-wrap .text-wrap .title h1 {
+    margin: 0;
+    font-size: 2.7rem;
+  }
+  main.kashiffkhan section.introduction .content-wrap .text-wrap .desc p, main.kashiffkhan section.background .content-wrap .text-wrap .desc p, main.kashiffkhan section.journey .content-wrap .text-wrap .desc p {
+    font-size: 15px;
+  }
+}
+
+main.fashiontv section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.fashiontv section.branding {
+  height: 200px;
+  background-color: #E23B3B;
+  background-image: url("../media/images/concepts-linear-branding.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 0;
+}
+
+main.fashiontv section.branding .logo-long {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.fashiontv section.branding .logo-long img {
+  height: 100%;
+  max-width: auto;
+}
+
+main.fashiontv section.video {
+  min-height: 50vh;
+}
+
+main.fashiontv section.video .video-wrap {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.fashiontv section.video .video-wrap video.md {
+  display: none;
+}
+
+main.fashiontv section.introduction {
+  min-height: 100vh;
+  width: 100%;
+}
+
+main.fashiontv section.introduction .video-wrap {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+main.fashiontv section.introduction .video-wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  overflow: hidden;
+}
+
+main.fashiontv section.introduction .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .role h3 {
+  color: white;
+  font-family: "New York";
+  font-size: 2rem;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+  height: 40vh;
+  overflow-y: scroll;
+}
+
+main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.fashiontv section.key-facts {
+  min-height: 90vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/keyfacts-bg1.webp"), #1B1464;
+  background-size: auto 150px, cover, cover;
+  background-position: 10% 10%, bottom left;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.fashiontv section.key-facts > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.fashiontv section.key-facts > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+  padding: 30px 0;
+}
+
+main.fashiontv section.key-facts > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.fashiontv section.key-facts > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  height: 60vh;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+
+main.fashiontv section.key-facts > .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.fashiontv section.key-facts > .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.fashiontv section.milestones {
+  min-height: 40vh;
+  background-color: #0C0C0C;
+  background-image: url("../media/images/concepts-branding.webp");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 60% auto;
+  background-blend-mode: screen;
+}
+
+main.fashiontv section.milestones .content-wrap {
+  width: 100%;
+}
+
+main.fashiontv section.milestones .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+  padding: 20px 0;
+}
+
+main.fashiontv section.milestones .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.fashiontv section.milestones .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0 10px 0;
+  border-top: 1px solid white;
+  height: 60vh;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+
+main.fashiontv section.milestones .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.fashiontv section.milestones .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.fashiontv section.milestones .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.fashiontv section.new-media {
+  min-height: 100vh;
+  width: 100%;
+}
+
+main.fashiontv section.new-media .video-wrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+main.fashiontv section.new-media .video-wrap .video-mask {
+  height: 100vh;
+  width: 100%;
+  background-color: gray;
+  overflow: hidden;
+}
+
+main.fashiontv section.new-media .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+  padding: 20px 0;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .role h3 {
+  color: white;
+  font-family: "New York";
+  font-size: 2rem;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.fashiontv section.future {
+  min-height: 70vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/keyfacts-bg2.webp"), #1B1464;
+  background-size: auto 150px, cover, cover;
+  background-position: 10% 10%, top right;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.fashiontv section.future > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.fashiontv section.future > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+  padding: 20px 0;
+}
+
+main.fashiontv section.future > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.fashiontv section.future > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+main.fashiontv section.future > .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.fashiontv section.future > .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.fashiontv section.future > .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.fashiontv section.conclusion {
+  min-height: 40vh;
+  background-color: #040404;
+  background-image: url("../media/images/concepts-branding.webp");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 60% auto;
+  background-blend-mode: overlay;
+  padding: 30px 0;
+}
+
+main.fashiontv section.conclusion .content-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.fashiontv section.conclusion .content-wrap .media-wrap {
+  width: 40%;
+  height: 100%;
+}
+
+main.fashiontv section.conclusion .content-wrap .media-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap {
+  width: 40%;
+  padding: 20px 0;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap .title {
+  z-index: 1;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0 10px 0;
+  border-top: 1px solid white;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.fashiontv section.conclusion .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  main.fashiontv section.future .content-wrap .text-wrap, main.fashiontv section.new-media .content-wrap .text-wrap, main.fashiontv section.milestones .content-wrap .text-wrap, main.fashiontv section.key-facts .content-wrap .text-wrap, main.fashiontv section.introduction .content-wrap .text-wrap, main.fashiontv section.conclusion .content-wrap .text-wrap {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main.fashiontv section.future .content-wrap .text-wrap, main.fashiontv section.milestones .content-wrap .text-wrap, main.fashiontv section.key-facts .content-wrap .text-wrap, main.fashiontv section.conclusion .content-wrap .text-wrap {
+    margin-left: 20%;
+    width: 70%;
+  }
+  main.fashiontv section.conclusion .content-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main.fashiontv section.conclusion .content-wrap .media-wrap,
+  main.fashiontv section.conclusion .content-wrap .text-wrap {
+    width: 100%;
+  }
+  main.fashiontv section.conclusion .content-wrap .text-wrap {
+    margin: 0;
+    padding: 20px 10px;
+  }
+  main.fashiontv section.conclusion .content-wrap .text-wrap .title h1 {
+    margin: 0;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+    font-size: 2.7rem;
+    margin: 0;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  main.fashiontv section.key-facts .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.fashiontv section.milestones .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+    font-size: 2.9rem;
+    margin: 0;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  main.fashiontv section.future .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.fashiontv section.conclusion .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem !important;
+  }
+  main.fashiontv section.conclusion .text-wrap .desc {
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.fashiontv section {
+    overflow: hidden;
+  }
+  main.fashiontv section.branding {
+    height: 120px;
+  }
+  main.fashiontv section.branding .logo-long img {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+    font-size: 2.7rem;
+    margin: 0;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  main.fashiontv section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc p {
+    font-size: 14px;
+  }
+  main.fashiontv section.key-facts .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.fashiontv section.key-facts .content-wrap .text-wrap .desc p,
+  main.fashiontv section.key-facts .content-wrap .text-wrap .desc ul li {
+    font-size: 14px;
+  }
+  main.fashiontv section.milestones .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.fashiontv section.milestones .content-wrap .text-wrap .desc p,
+  main.fashiontv section.milestones .content-wrap .text-wrap .desc ul li {
+    font-size: 14px;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+    font-size: 2.9rem;
+    margin: 0;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc p,
+  main.fashiontv section.new-media .video-wrap .video-overlay .content-wrap .text-wrap .desc ul li {
+    font-size: 14px;
+  }
+  main.fashiontv section.future .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.fashiontv section.future .content-wrap .text-wrap .desc p,
+  main.fashiontv section.future .content-wrap .text-wrap .desc ul li {
+    font-size: 14px;
+  }
+  main.fashiontv section.conclusion .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem !important;
+  }
+  main.fashiontv section.conclusion .text-wrap .desc {
+    overflow-y: scroll;
+  }
+  main.fashiontv section.conclusion .text-wrap .desc p,
+  main.fashiontv section.conclusion .text-wrap .desc ul li {
+    font-size: 14px !important;
+  }
+}
+
+main.channels section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.channels section.introduction {
+  min-height: 80vh;
+}
+
+main.channels section.introduction .wrap-overlay {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  background-color: black;
+  background: url("../media/images/concepts-branding.webp"), -webkit-gradient(linear, left bottom, left top, from(#1b1464), color-stop(50%, rgba(27, 20, 100, 0))), url("../media/images/channels-bg1.webp");
+  background: url("../media/images/concepts-branding.webp"), linear-gradient(0deg, #1b1464 0%, rgba(27, 20, 100, 0) 50%), url("../media/images/channels-bg1.webp");
+  background-size: 200px auto, cover, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 20% 20%, top left, center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.channels section.introduction .wrap-overlay .text-content {
+  min-height: 30vh;
+  width: 80%;
+}
+
+main.channels section.introduction .wrap-overlay .text-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  text-align: center;
+}
+
+main.channels section.introduction .wrap-overlay .text-content .desc {
+  padding: 30px 0;
+}
+
+main.channels section.introduction .wrap-overlay .text-content .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.channels section.channels .channel {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+  height: 50vh;
+}
+
+main.channels section.channels .channel .channel-title .title-bg {
+  width: 50%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: #D4145A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.channels section.channels .channel .channel-title .title-bg .title {
+  margin-left: -31%;
+}
+
+main.channels section.channels .channel .channel-title .title-bg .title h1 {
+  font-size: 9vw;
+  font-family: "Nexa";
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #1b1464;
+}
+
+main.channels section.channels .channel .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -5%;
+}
+
+main.channels section.channels .channel .channel-title .title-bg .title h1 span {
+  font-family: "Nexa";
+  font-weight: 500;
+  color: white;
+}
+
+main.channels section.channels .channel .channel-content {
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .media-wrap {
+  height: 100%;
+  width: 50%;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .media-wrap .wrap {
+  height: 100%;
+  width: 100%;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .media-wrap .wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .media-wrap .wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .media-wrap .wrap .video-mask video.p {
+  display: none;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .media-wrap .wrap .video-mask video.md {
+  display: none;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .text-wrap {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .text-wrap .wrap {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  padding: 10px;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .text-wrap .wrap p {
+  max-height: 40vh;
+  color: #1b1464;
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .text-wrap .wrap ul {
+  max-height: 40vh;
+  list-style: "❖ ";
+}
+
+main.channels section.channels .channel .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(1) {
+  background-color: #1b1464;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-title .title-bg {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-title .title-bg .title {
+  margin-left: -31%;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-title .title-bg .title h1 {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -5%;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-title .title-bg .title h1 span {
+  color: white;
+  -webkit-text-stroke: 3px #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-content {
+  background-color: white;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel:nth-child(1) .channel-content .content-wrap .text-wrap .wrap p {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(2) {
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-title .title-bg {
+  background-color: #000000;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-title .title-bg .title {
+  margin-left: -45%;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-title .title-bg .title h1 {
+  text-transform: unset;
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-title .title-bg .title h1 span {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-content {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.channels section.channels .channel:nth-child(2) .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(3) {
+  background-color: #1b1464;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-title .title-bg {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-title .title-bg .title {
+  margin-left: -33%;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-title .title-bg .title h1 {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -5%;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-title .title-bg .title h1 span {
+  color: white;
+  -webkit-text-stroke: 3px #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-content {
+  background-color: white;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel:nth-child(3) .channel-content .content-wrap .text-wrap .wrap p {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(4) {
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-title .title-bg {
+  background-color: #000000;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-title .title-bg .title {
+  margin-left: -45%;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-title .title-bg .title h1 {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-title .title-bg .title h1 span {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-content {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.channels section.channels .channel:nth-child(4) .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(5) {
+  background-color: #1b1464;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-title .title-bg {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-title .title-bg .title {
+  margin-left: -31%;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-title .title-bg .title h1 {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -5%;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-title .title-bg .title h1 span {
+  color: white;
+  -webkit-text-stroke: 3px #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-content {
+  background-color: white;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel:nth-child(5) .channel-content .content-wrap .text-wrap .wrap p {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(6) {
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-title .title-bg {
+  background-color: #000000;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-title .title-bg .title {
+  margin-left: -40%;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-title .title-bg .title h1 {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-title .title-bg .title h1 span {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: 31%;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-content {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.channels section.channels .channel:nth-child(6) .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(7) {
+  background-color: #1b1464;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-title .title-bg {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-title .title-bg .title {
+  margin-left: -31%;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-title .title-bg .title h1 {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -12%;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-title .title-bg .title h1 span {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-content {
+  background-color: white;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel:nth-child(7) .channel-content .content-wrap .text-wrap .wrap p {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(8) {
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-title .title-bg {
+  background-color: #000000;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-title .title-bg .title {
+  margin-left: -41%;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-title .title-bg .title h1 {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-title .title-bg .title h1 span {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: 3%;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-content {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.channels section.channels .channel:nth-child(8) .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(9) {
+  background-color: #1b1464;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-title .title-bg {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-title .title-bg .title {
+  margin-left: -34%;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-title .title-bg .title h1 {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -5%;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-title .title-bg .title h1 span {
+  color: white;
+  -webkit-text-stroke: 3px #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-content {
+  background-color: white;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel:nth-child(9) .channel-content .content-wrap .text-wrap .wrap p {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(10) {
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-title .title-bg {
+  background-color: #000000;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-title .title-bg .title {
+  margin-left: -37%;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-title .title-bg .title h1 {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-title .title-bg .title h1 span {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: 24%;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-content {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.channels section.channels .channel:nth-child(10) .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(11) {
+  background-color: #1b1464;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-title .title-bg {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-title .title-bg .title {
+  margin-left: -34%;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-title .title-bg .title h1 {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-title .title-bg .title h1:nth-child(2) {
+  margin-left: -5%;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-title .title-bg .title h1 span {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-content {
+  background-color: white;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.channels section.channels .channel:nth-child(11) .channel-content .content-wrap .text-wrap .wrap p {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(12) {
+  background-color: #ffffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-title .title-bg {
+  background-color: #000000;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-title .title-bg .title {
+  margin-left: -52%;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-title .title-bg .title h1 {
+  color: white;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-title .title-bg .title h1 span {
+  color: #1b1464;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-content {
+  background-color: #D4145A;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-content .content-wrap {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main.channels section.channels .channel:nth-child(12) .channel-content .content-wrap .text-wrap .wrap ul li {
+  color: white;
+}
+
+main.channels section.reach {
+  background-color: #D4145A;
+  min-height: 60vh;
+}
+
+main.channels section.reach .swiper {
+  width: 100%;
+  min-height: 50vh;
+}
+
+main.channels section.reach .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: 100%;
+  background-color: #D4145A;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.channels section.reach .swiper .swiper-button-next,
+main.channels section.reach .swiper .swiper-button-prev {
+  color: #1b1464;
+  font-weight: bold;
+}
+
+main.channels section.reach .swiper .swiper-pagination-bullet-active {
+  color: #1b1464;
+}
+
+main.channels section.reach .content-wrap {
+  padding: 40px 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 1005;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.channels section.reach .content-wrap .text-wrap {
+  width: 90%;
+}
+
+main.channels section.reach .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  text-align: center;
+}
+
+main.channels section.reach .content-wrap .text-wrap .desc {
+  color: white;
+  text-align: left;
+}
+
+main.channels section.reach .content-wrap .text-wrap .desc ul {
+  margin-left: 20px;
+}
+
+main.channels section.reach .content-wrap .text-wrap .desc ul li span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  main.channels section.channels .channel {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: block !important;
+    border-bottom: 2px solid white;
+  }
+  main.channels section.channels .channel .channel-title {
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.channels section.channels .channel .channel-title .title-bg {
+    width: 100%;
+  }
+  main.channels section.channels .channel .channel-title .title-bg .title {
+    margin-left: unset !important;
+    width: 100%;
+    padding: 20px 0;
+  }
+  main.channels section.channels .channel .channel-title .title-bg .title h1 {
+    text-align: center;
+    color: white !important;
+  }
+  main.channels section.channels .channel .channel-title .title-bg .title h1 span {
+    color: white !important;
+    -webkit-text-stroke: unset !important;
+  }
+  main.channels section.channels .channel .channel-content {
+    height: unset;
+    min-height: 60vh;
+  }
+  main.channels section.channels .channel .channel-content .content-wrap {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  main.channels section.channels .channel .channel-content .content-wrap .media-wrap {
+    width: 100%;
+    height: 50vh;
+  }
+  main.channels section.channels .channel .channel-content .content-wrap .text-wrap {
+    width: 100%;
+    height: unset;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    padding: 30px 0;
+  }
+  main.channels section.introduction .wrap-overlay .text-content .title {
+    padding-bottom: 10px;
+  }
+  main.channels section.introduction .wrap-overlay .text-content .title h1 {
+    font-size: 40px;
+  }
+  main.channels section.introduction .wrap-overlay .text-content .desc {
+    height: 50vh;
+    overflow-y: scroll;
+  }
+  main.channels section.reach .content-wrap .text-wrap .title {
+    padding-bottom: 10px;
+  }
+  main.channels section.reach .content-wrap .text-wrap .title h1 {
+    font-size: 50px;
+  }
+  main.channels section.reach .content-wrap .text-wrap .desc {
+    height: 50vh;
+    overflow-y: scroll;
+  }
+}
+
+main.concepts section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.concepts section.branding {
+  height: 200px;
+  background-color: #E23B3B;
+  background-image: url("../media/images/concepts-linear-branding.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 0;
+}
+
+main.concepts section.branding .logo-long {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.concepts section.branding .logo-long img {
+  height: 100%;
+  max-width: auto;
+}
+
+main.concepts section.video {
+  min-height: 50vh;
+}
+
+main.concepts section.video .video-wrap {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.concepts section.video .video-wrap video.md {
+  display: none;
+}
+
+main.concepts section.introduction {
+  min-height: 100vh;
+  width: 100%;
+}
+
+main.concepts section.introduction .video-wrap {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+main.concepts section.introduction .video-wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  overflow: hidden;
+}
+
+main.concepts section.introduction .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main.concepts section.introduction .video-wrap .video-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+main.concepts section.introduction .video-wrap .video-overlay .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+}
+
+main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .role h3 {
+  color: white;
+  font-family: "New York";
+  font-size: 2rem;
+}
+
+main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+}
+
+main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+main.concepts section.potential {
+  min-height: 90vh;
+  width: 100%;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/keyfacts-bg1.webp"), #1B1464;
+  background-size: auto 150px, cover, cover;
+  background-position: 10% 10%, bottom left;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.concepts section.potential > .content-wrap {
+  height: 60%;
+  width: 100%;
+}
+
+main.concepts section.potential > .content-wrap .text-wrap {
+  width: 40%;
+  margin-left: 40%;
+  padding: 30px 0;
+}
+
+main.concepts section.potential > .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  margin-left: -20%;
+}
+
+main.concepts section.potential > .content-wrap .text-wrap .desc {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 1px solid white;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+main.concepts section.potential > .content-wrap .text-wrap .desc ul li {
+  color: white;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.concepts section.potential > .content-wrap .text-wrap .desc ul li::before {
+  content: '●';
+  display: block;
+  padding-right: 10px;
+}
+
+main.concepts section.mission-vision {
+  background-color: #D4145A;
+  min-height: 100vh;
+  position: relative;
+}
+
+main.concepts section.mission-vision .title-content {
+  position: absolute;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  bottom: 50vh;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.concepts section.mission-vision .title-content .title {
+  width: 90%;
+  padding: 30px 0;
+  position: absolute;
+}
+
+main.concepts section.mission-vision .title-content .title h1 {
+  font-family: "Nexa";
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+main.concepts section.mission-vision .title-content .title h1 span {
+  font-family: "Nexa";
+  font-weight: 700;
+  display: block;
+}
+
+main.concepts section.mission-vision .swiper {
+  width: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  z-index: 0;
+  background-image: url("../media/images/mva-bg.webp");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: top center;
+}
+
+main.concepts section.mission-vision .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: 100vh;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.concepts section.mission-vision .swiper .swiper-wrapper .swiper-slide .content-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.concepts section.mission-vision .swiper .swiper-button-next,
+main.concepts section.mission-vision .swiper .swiper-button-prev {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+main.concepts section.mission-vision .swiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+main.concepts section.mission-vision .swiper .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
+main.concepts section.mission-vision .content-wrap {
+  padding: 40px 0;
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.concepts section.mission-vision .content-wrap .text-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.concepts section.mission-vision .content-wrap .text-wrap .title {
+  width: 40%;
+}
+
+main.concepts section.mission-vision .content-wrap .text-wrap .title h1 {
+  color: white;
+  font-family: "Nexa";
+  font-weight: 700;
+  font-size: 9vw;
+}
+
+main.concepts section.mission-vision .content-wrap .text-wrap .desc {
+  color: white;
+  text-align: left;
+  width: 60%;
+  padding: 30px 0;
+}
+
+main.concepts section.mission-vision .content-wrap .text-wrap .desc p {
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  main.concepts section.introduction .video-wrap .video-overlay .content-wrap {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+    padding-top: 20px;
+  }
+  main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .title h1 {
+    font-size: 2.9rem;
+    margin: 0;
+  }
+  main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  main.concepts section.introduction .video-wrap .video-overlay .content-wrap .text-wrap .desc p {
+    font-size: 14px;
+  }
+  main.concepts section.potential .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.concepts section.potential .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.concepts section.potential .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+  }
+  main.concepts section.potential .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.concepts section.mission-vision .content-wrap .text-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main.concepts section.mission-vision .content-wrap .text-wrap .desc {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.concepts section.potential .content-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 70vh;
+  }
+  main.concepts section.potential .content-wrap .text-wrap {
+    width: 90%;
+    margin-left: 0;
+  }
+  main.concepts section.potential .content-wrap .text-wrap .title h1 {
+    margin-left: 0;
+    font-size: 2.7rem;
+  }
+  main.concepts section.potential .content-wrap .text-wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+  }
+  main.concepts section.potential .content-wrap .text-wrap .desc ul li {
+    font-size: 15px;
+  }
+  main.concepts section.mission-vision .title-content {
+    bottom: 60vh;
+  }
+  main.concepts section.mission-vision .title-content .title {
+    padding: 0;
+  }
+  main.concepts section.mission-vision .title-content .title h1 {
+    font-size: 2.7rem;
+  }
+}
+
+main.features section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.features section.branding {
+  height: 200px;
+  background-color: #E23B3B;
+  background-image: url("../media/images/concepts-linear-branding.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 80% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 0;
+}
+
+main.features section.branding .logo-long {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.features section.branding .logo-long img {
+  height: 100%;
+  max-width: auto;
+}
+
+main.features section.intro {
+  min-height: 50vh;
+  background: url("../media/images/intro-bg.webp"), black;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+main.features section.intro .wrap .title-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 8vw;
+  text-align: center;
+}
+
+main.features section.intro .wrap .body-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0 10 0;
+}
+
+main.features section.intro .wrap .body-content .content-wrap {
+  width: 25%;
+  border-top: 1px solid white;
+  padding: 10px 0;
+}
+
+main.features section.intro .wrap .body-content .content-wrap p {
+  color: white;
+  max-height: 40vh;
+  width: 70vw;
+  margin-left: -100%;
+}
+
+main.features section.intro .media-content {
+  width: 100%;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.features section.intro .media-content .wrap {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+main.features section.intro .media-content .wrap img {
+  width: 100%;
+  height: auto;
+}
+
+main.features section.video {
+  min-height: 50vh;
+  width: 100%;
+}
+
+main.features section.video .video-wrap {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+main.features section.video .video-wrap .video-mask {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: gray;
+}
+
+main.features section.video .video-wrap .video-mask video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main.features section.video .video-wrap .video-mask video.p {
+  display: none;
+}
+
+main.features section.video .video-wrap .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap {
+  height: 200px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .branding {
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .branding img {
+  width: 60%;
+  height: auto;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .social-links {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 50px;
+  text-align: center;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .links ul {
+  list-style: none;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .links ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+main.features section.video .video-wrap .video-overlay .content-wrap .social-band .social-links .links ul li .fab {
+  color: white;
+}
+
+main.features section.platform-show {
+  min-height: 70vh;
+  width: 100%;
+  background-image: url("../media/images/slide-bg.webp");
+  background-size: cover;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.features section.platform-show .logo {
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.features section.platform-show .logo img {
+  width: 250px;
+  height: auto;
+}
+
+main.features section.platform-show .title-content {
+  padding: 0 0 30px 0;
+}
+
+main.features section.platform-show .title-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  text-align: center;
+}
+
+main.features section.platform-show .divider {
+  height: 1px;
+  background-color: white;
+  width: 280px;
+}
+
+main.features section.sales-marketing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../media/images/concepts-branding.webp"), url("../media/images/cicle-bg.webp"), url("../media/images/texture-bg.webp");
+  background-repeat: repeat-y, no-repeat, no-repeat;
+  background-size: 80% auto, auto 80%, cover;
+  background-position: center top, center, center;
+}
+
+main.features section.sales-marketing .content-wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+main.features section.sales-marketing .content-wrap .media-content {
+  width: 45%;
+  height: 100%;
+}
+
+main.features section.sales-marketing .content-wrap .media-content .wrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.features section.sales-marketing .content-wrap .media-content .wrap img {
+  width: 80%;
+  height: auto;
+}
+
+main.features section.sales-marketing .content-wrap .text-content {
+  width: 55%;
+  height: 100%;
+}
+
+main.features section.sales-marketing .content-wrap .text-content .wrap {
+  margin-top: 100px;
+}
+
+main.features section.sales-marketing .content-wrap .text-content .wrap .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 6rem;
+  line-height: 5rem;
+  width: 7ch;
+}
+
+main.features section.sales-marketing .content-wrap .text-content .wrap .title h1 span {
+  font-family: "New York";
+  margin-left: 80px;
+}
+
+main.features section.sales-marketing .content-wrap .text-content .wrap .desc {
+  margin-left: 80px;
+  margin-top: 40px;
+  width: 300px;
+}
+
+main.features section.sales-marketing .content-wrap .text-content .wrap .desc p {
+  color: white;
+  font-size: 1.2rem;
+  max-height: 40vh;
+}
+
+main.features section.sales-marketing .desk-patch {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  background-color: #EEEFF5;
+}
+
+main.features section.branding-show {
+  min-height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: #0C0C0C;
+  background-image: url("../media/images/f-bubble-branding.webp");
+  background-size: auto 250px;
+  background-repeat: no-repeat;
+  background-position: 90% 70%;
+}
+
+main.features section.branding-show .content-wrap .media-content .wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.features section.branding-show .content-wrap .media-content .wrap img {
+  height: 100%;
+  width: auto;
+}
+
+main.features section.branding-show .content-wrap .text-content {
+  margin-top: -40px;
+  padding-bottom: 50px;
+}
+
+main.features section.branding-show .content-wrap .text-content .title {
+  padding: 10px 0;
+}
+
+main.features section.branding-show .content-wrap .text-content .title h1 {
+  color: white;
+  font-family: "New York";
+  font-size: 7rem;
+  line-height: 5rem;
+  text-align: center;
+}
+
+main.features section.branding-show .content-wrap .text-content .desc {
+  margin-top: 30px;
+  padding: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.features section.branding-show .content-wrap .text-content .desc p {
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+  width: 40%;
+  max-height: 40vh;
+  color: white;
+}
+
+main.features section.pub-rel-services {
+  min-height: 20vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  position: relative;
+  background-color: #D4145A;
+}
+
+main.features section.pub-rel-services .content-wrap {
+  width: 40%;
+}
+
+main.features section.pub-rel-services .content-wrap .wrap {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: -26vh;
+  width: 80%;
+}
+
+main.features section.pub-rel-services .content-wrap .wrap .title-wrap .title h1 {
+  font-family: "Nexa";
+  font-weight: 700;
+  color: #D4145A;
+  font-size: 5rem;
+  line-height: 4.5rem;
+}
+
+main.features section.pub-rel-services .content-wrap .wrap .text-content .desc {
+  height: 20vh;
+  overflow-y: scroll;
+}
+
+main.features section.pub-rel-services .content-wrap .wrap .text-content .desc p {
+  color: white;
+}
+
+main.features section.style-statement {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: #D4145A;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.features section.style-statement .content-wrap {
+  min-height: 80vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main.features section.style-statement .content-wrap .media-content {
+  width: 60%;
+}
+
+main.features section.style-statement .content-wrap .media-content .wrap {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.features section.style-statement .content-wrap .media-content .wrap img.small {
+  width: 45%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+main.features section.style-statement .content-wrap .media-content .wrap img.bg-blend {
+  width: 75%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  mix-blend-mode: luminosity;
+}
+
+main.features section.style-statement .content-wrap .text-content {
+  width: 40%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.features section.style-statement .content-wrap .text-content .wrapper .title h1 {
+  font-family: "Nexa";
+  font-weight: 700;
+  font-size: 7vw;
+  color: white;
+  text-shadow: -5px 5px #D4145A;
+}
+
+main.features section.style-statement .content-wrap .text-content .wrapper .desc p {
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  main.features section.sales-marketing .content-wrap .text-content .wrap .title h1 {
+    color: white;
+    font-family: "New York";
+    font-size: 8vw;
+    line-height: 6vw;
+  }
+  main.features section.branding-show {
+    background-position: 100% 50%;
+    background-size: auto 150px;
+  }
+  main.features section.branding-show .content-wrap .media-content .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.features section.branding-show .content-wrap .media-content .wrap img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  main.features section.branding-show .content-wrap .text-content .title h1 {
+    font-size: 15vw;
+  }
+  main.features section.branding-show .content-wrap .text-content .desc p {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main.features section.branding {
+    height: 150px;
+  }
+  main.features section.intro .wrap .title-content .title h1 {
+    font-size: 3.8rem !important;
+  }
+  main.features section.intro .wrap .body-content .content-wrap p {
+    width: 90vw;
+    margin-left: -120%;
+    overflow-y: scroll;
+  }
+  main.features section.intro .media-content {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  main.features section.intro .media-content .wrap {
+    width: 100%;
+  }
+  main.features section.platform-show .title-content .title h1 {
+    font-size: 2.7rem;
+  }
+  main.features section.video .video-wrap .video-overlay .content-wrap {
+    height: unset;
+    min-height: 200px;
+  }
+  main.features section.video .video-wrap .video-overlay .content-wrap .social-band {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main.features section.video .video-wrap .video-overlay .content-wrap .social-band .branding,
+  main.features section.video .video-wrap .video-overlay .content-wrap .social-band .social-links {
+    width: 100%;
+    padding: 20px 0;
+  }
+  main.features section.sales-marketing {
+    background-size: 80% auto, auto 50%, cover;
+  }
+  main.features section.sales-marketing .content-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main.features section.sales-marketing .content-wrap .text-content {
+    width: 100%;
+  }
+  main.features section.sales-marketing .content-wrap .text-content .wrap {
+    padding: 0 10px;
+  }
+  main.features section.sales-marketing .content-wrap .text-content .wrap .title h1 {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  main.features section.sales-marketing .content-wrap .text-content .wrap .title h1 span {
+    margin-left: 0 !important;
+  }
+  main.features section.sales-marketing .content-wrap .text-content .wrap .desc {
+    width: 80%;
+    margin-left: 0;
+  }
+  main.features section.sales-marketing .content-wrap .media-content {
+    width: 100%;
+  }
+  main.features section.sales-marketing .content-wrap .media-content .wrap img {
+    width: 70%;
+    height: auto;
+  }
+  main.features section.branding-show {
+    background-position: 100% 90%;
+  }
+  main.features section.branding-show .content-wrap .media-content .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.features section.branding-show .content-wrap .media-content .wrap img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  main.features section.branding-show .content-wrap .text-content .title h1 {
+    font-size: 15vw;
+  }
+  main.features section.branding-show .content-wrap .text-content .desc p {
+    width: 60%;
+  }
+  main.features section.pub-rel-services {
+    min-height: 20vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.features section.pub-rel-services .content-wrap {
+    width: 90%;
+  }
+  main.features section.pub-rel-services .content-wrap > .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+  main.features section.pub-rel-services .content-wrap > .wrap .title-wrap .title h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  main.features section.pub-rel-services .content-wrap > .wrap .text-content .desc {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.features section.style-statement {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    background-color: #D4145A;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.features section.style-statement .content-wrap {
+    min-height: 80vh;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  main.features section.style-statement .content-wrap .media-content {
+    width: 60%;
+  }
+  main.features section.style-statement .content-wrap .media-content .wrap {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main.features section.style-statement .content-wrap .media-content .wrap img.small {
+    width: 45%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.features section.style-statement .content-wrap .media-content .wrap img.bg-blend {
+    width: 75%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    mix-blend-mode: luminosity;
+  }
+  main.features section.style-statement .content-wrap .text-content {
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.features section.style-statement .content-wrap .text-content .wrapper .title h1 {
+    font-family: "Nexa";
+    font-weight: 700;
+    font-size: 7vw;
+    color: white;
+    text-shadow: -5px 5px #D4145A;
+  }
+  main.features section.style-statement .content-wrap .text-content .wrapper .desc p {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.features section {
+    overflow: hidden;
+  }
+  main.features section.branding {
+    height: 120px;
+  }
+  main.features section.branding .logo-long img {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.features section.branding-show {
+    background-position: 100% 90%;
+  }
+  main.features section.branding-show .content-wrap .media-content .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main.features section.branding-show .content-wrap .media-content .wrap img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  main.features section.branding-show .content-wrap .text-content .title h1 {
+    font-size: 15vw;
+  }
+  main.features section.branding-show .content-wrap .text-content .desc p {
+    width: 90%;
+  }
+  main.features section.pub-rel-services .title-wrap .title h1 {
+    font-size: 3rem;
+    line-height: 2.6rem;
+  }
+  main.features section.style-statement {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    background-color: #D4145A;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.features section.style-statement .content-wrap {
+    min-height: 80vh;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main.features section.style-statement .content-wrap .media-content, main.features section.style-statement .content-wrap .text-content {
+    width: 100%;
+  }
+  main.features section.style-statement .content-wrap .text-content .wrapper .title h1 {
+    font-size: 2.7rem;
+  }
+}
+
+main.franchise section {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+main.franchise section.hero-title {
+  height: 50vh;
+  background-color: black;
+  background-image: url("../media/images/franchise-bg1.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+main.franchise section.hero-title .content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: inherit;
+  width: 100%;
+}
+
+main.franchise section.hero-title .content-wrap .title-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  width: 100%;
+}
+
+main.franchise section.hero-title .content-wrap .title-content h1 {
+  width: 100%;
+  color: white;
+  font-family: "New York";
+  font-size: 7vw;
+  text-align: center;
+}
+
+main.franchise section.hero-title .content-wrap .title-content h1.animate {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0)), color-stop(50%, white), color-stop(80%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, white 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 2.5s linear infinite;
+          animation: textclip 2.5s linear infinite;
+  display: inline-block;
+}
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+main.franchise section.modules {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+main.franchise section.modules .content-wrap {
+  width: 90%;
+}
+
+main.franchise section.modules .content-wrap .title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+main.franchise section.modules .content-wrap .title-wrap .title-content h1 {
+  color: #D4145A;
+  font-family: "New York";
+  font-size: 7vw;
+  text-align: center;
+}
+
+main.franchise section.modules .content-wrap .title-wrap .download-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+main.franchise section.modules .content-wrap .title-wrap .download-btn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Nexa";
+  font-size: 2rem;
+  width: 100%;
+}
+
+main.franchise section.modules .content-wrap .title-wrap .download-btn a::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 70vw;
+  height: 5px;
+  margin-top: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main.franchise section.modules .content-wrap .title-wrap .download-btn a:hover::after {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0)), color-stop(50%, white), color-stop(80%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, white 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+main.franchise section.modules .content-wrap .text-content .title h1 {
+  text-align: center;
+  font-weight: 600;
+  color: #D4145A;
+  font-size: 4rem;
+}
+
+main.franchise section.modules .content-wrap .text-content .desc {
+  padding: 40px 0;
+}
+
+main.franchise section.modules .content-wrap .text-content .desc .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+}
+
+main.franchise section.modules .content-wrap .text-content .desc .table table,
+main.franchise section.modules .content-wrap .text-content .desc .table th,
+main.franchise section.modules .content-wrap .text-content .desc .table td {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-weight: normal;
+}
+
+main.franchise section.modules .content-wrap .text-content .desc .table table th,
+main.franchise section.modules .content-wrap .text-content .desc .table table td {
+  -webkit-box-shadow: 0 0 0 1px white;
+          box-shadow: 0 0 0 1px white;
+  padding: 15px 5vw;
+}
+
+main.franchise section.modules .content-wrap .text-content .desc .table table th {
+  font-weight: 600;
+  text-align: left;
+}
+
+main.franchise section.modules .content-wrap .text-content .desc .table table tr td:first-child {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 576px) {
+  main.franchise section.modules .content-wrap .text-content .desc .table table th,
+  main.franchise section.modules .content-wrap .text-content .desc .table table td {
+    padding: 15px 5vw;
+  }
+}
+
+main.franchise section.pre-req .pre-req-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap {
+  width: 70%;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .title {
+  padding: 30px 0;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .title h1 {
+  font-family: "Nexa";
+  font-weight: 300;
+  font-size: 4vw;
+  text-align: center;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper {
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  padding-bottom: 40px;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap .numbering {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap .numbering h1 {
+  font-family: "Nexa";
+  font-weight: 700;
+  font-size: 6vw;
+  color: #D4145A;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap .desc p span {
+  font-family: "Nexa";
+  color: #D4145A;
+  padding: 10px 0;
+  display: block;
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-pagination-bullet {
+  background: rgba(212, 20, 90, 0.7);
+}
+
+main.franchise section.pre-req .pre-req-wrap .content-wrap .text-content .wrap .desc .swiper .swiper-pagination-bullet-active {
+  background: #D4145A;
+}
+
+main.franchise section.brand-support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.franchise section.brand-support .br-wrap {
+  width: 80%;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content {
+  width: 50%;
+  height: 100%;
+  background-color: #D4145A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap {
+  padding: 40px;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title {
+  margin-left: -51%;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title h1 {
+  font-size: 9vw;
+  font-family: "Nexa";
+  font-weight: 500;
+  text-transform: capitalize;
+  -webkit-text-stroke: 1px white;
+  color: white;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title h1 span {
+  font-family: "Nexa";
+  font-weight: 500;
+  color: #D4145A;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title h1:nth-child(2) {
+  margin-left: -3%;
+}
+
+main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .desc p {
+  color: white;
+}
+
+main.franchise section.enquiry {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.franchise section.enquiry .content-wrap {
+  width: 80%;
+  padding: 50px 0;
+}
+
+main.franchise section.enquiry .content-wrap .title-content h1 {
+  font-size: 9vw;
+  font-family: "Nexa";
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #1B1464;
+  text-align: center;
+}
+
+main.franchise section.enquiry .content-wrap .form-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.franchise section.enquiry .content-wrap .form-content form {
+  width: 50%;
+}
+
+main.franchise section.enquiry .content-wrap .form-content form .form-input input,
+main.franchise section.enquiry .content-wrap .form-content form .form-input textarea {
+  width: 100%;
+  font-size: 16px;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+main.franchise section.enquiry .content-wrap .form-content form .form-submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+}
+
+main.franchise section.enquiry .content-wrap .form-content form .form-submit button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+main.franchise section.enquiry .content-wrap .form-content form .form-submit button[type="submit"] {
+  background-color: #1B1464;
+  color: white;
+  font-family: "Nexa";
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  main.franchise section.modules .content-wrap .text-content .title h1 {
+    font-size: 2.2rem;
+  }
+  main.franchise section.brand-support .br-wrap .content-wrap .text-content {
+    width: 100%;
+  }
+  main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title {
+    margin: 0;
+  }
+  main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title h1:nth-child(2) {
+    margin: 0;
+  }
+  main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .title h1 span {
+    color: white;
+  }
+  main.franchise section.brand-support .br-wrap .content-wrap .text-content .wrap .desc {
+    height: 40vh;
+    overflow-y: scroll;
+    margin: 10px 0;
+  }
+  main.franchise section.enquiry .content-wrap .form-content form {
+    width: 80%;
+  }
+  main.franchise section.pre-req .swiper .swiper-wrapper .swiper-slide .content-wrap {
+    width: 100%;
+  }
+  main.franchise section.pre-req .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  main.franchise section.pre-req .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap .title h1 {
+    font-size: 2.5rem;
+  }
+  main.franchise section.pre-req .swiper .swiper-wrapper .swiper-slide .content-wrap .wrap .desc p span {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  main.franchise section.enquiry .content-wrap .title-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main.franchise section.modules .content-wrap .text-content .desc .table table th,
+  main.franchise section.modules .content-wrap .text-content .desc .table table td {
+    padding: 10px 5px;
+  }
+  main.franchise section.brand-support .br-wrap {
+    width: 90%;
+  }
+  main.franchise section.enquiry .content-wrap {
+    width: 90%;
+  }
 }

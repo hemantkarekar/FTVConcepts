@@ -1,4 +1,15 @@
+@import "_base";
+
 main{
     font-family: "MyriadPro";
     font-weight: 600;
 }
+
+@import "_index.scss";
+@import "_micheladam.scss";
+@import "_kashiffkhan.scss";
+@import "_fashiontv.scss";
+@import "_channels.scss";
+@import "_concepts.scss";
+@import "_features.scss";
+@import "_franchise.scss";

@@ -1,0 +1,505 @@
+main.franchise {
+    section {
+        min-height: fit-content;
+
+        &.hero-title {
+            height: 50vh;
+            background-color: black;
+            background-image: url("../media/images/franchise-bg1.webp");
+            background-position: center;
+            background-size: cover;
+
+            .content-wrap {
+                display: flex;
+                align-items: flex-end;
+                height: inherit;
+                width: 100%;
+
+                .title-content {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding: 30px;
+                    width: 100%;
+
+                    h1 {
+                        width: 100%;
+                        color: white;
+                        font-family: "New York";
+                        font-size: 7vw;
+                        text-align: center;
+
+                        &.animate {
+                            background-image: linear-gradient(90deg,
+                                    rgba(255, 255, 255, 0) 0%,
+                                    rgba(255, 255, 255, 0) 20%,
+                                    rgba(255, 255, 255, 1) 50%,
+                                    rgba(255, 255, 255, 0) 80%,
+                                    rgba(255, 255, 255, 0) 100%);
+                            background-size: auto auto;
+                            background-clip: border-box;
+                            background-size: 200% auto;
+                            color: #fff;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            animation: textclip 2.5s linear infinite;
+                            display: inline-block;
+                        }
+
+                        @keyframes textclip {
+                            to {
+                                background-position: 200% center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.modules {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+
+            .content-wrap {
+                width: 90%;
+
+                .title-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 30px 0;
+
+                    .title-content {
+                        h1 {
+                            color: #D4145A;
+                            font-family: "New York";
+                            font-size: 7vw;
+                            text-align: center;
+                        }
+                    }
+
+                    .download-btn {
+                        text-align: center;
+                        margin-top: 30px;
+
+                        a {
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-family: "Nexa";
+                            font-size: 2rem;
+                            width: 100%;
+
+                            &::after {
+                                content: '';
+                                position: relative;
+                                display: block;
+                                width: 70vw;
+                                height: 5px;
+                                margin-top: 20px;
+                                background: linear-gradient(90deg,
+                                        rgba(255, 255, 255, 0) 0%,
+                                        rgba(255, 255, 255, 0) 20%,
+                                        rgba(255, 255, 255, 0.5) 50%,
+                                        rgba(255, 255, 255, 0) 80%,
+                                        rgba(255, 255, 255, 0) 100%);
+                                transition: all 0.5s ease-in-out;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    background: linear-gradient(90deg,
+                                            rgba(255, 255, 255, 0) 0%,
+                                            rgba(255, 255, 255, 0) 20%,
+                                            rgba(255, 255, 255, 1) 50%,
+                                            rgba(255, 255, 255, 0) 80%,
+                                            rgba(255, 255, 255, 0) 100%);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .text-content {
+                    .title {
+                        h1 {
+                            text-align: center;
+                            font-weight: 600;
+                            color: #D4145A;
+                            font-size: 4rem;
+                        }
+                    }
+
+                    .desc {
+                        padding: 40px 0;
+
+                        .table {
+                            display: flex;
+                            justify-content: center;
+                            padding: 20px 0;
+
+                            table,
+                            th,
+                            td {
+                                color: white;
+                                text-transform: uppercase;
+                                font-family: "Poppins";
+                                font-weight: normal;
+                            }
+
+                            table th {}
+
+                            table th,
+                            table td {
+                                &:not(:last-child) {
+                                    // border-right: 1px solid white;
+                                }
+
+                                box-shadow: 0 0 0 1px white;
+                                padding: 15px 5vw;
+                            }
+
+                            table {
+                                th {
+                                    font-weight: 600;
+                                    text-align: left;
+                                }
+
+                                tr {
+                                    td:first-child {
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            @media screen and (min-width:576px) {
+
+                                table th,
+                                table td {
+                                    padding: 15px 5vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.pre-req {
+            .pre-req-wrap {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .content-wrap {
+                    width: 70%;
+
+                    .text-content {
+                        .wrap {
+                            .title {
+                                padding: 30px 0;
+
+                                h1 {
+                                    font-family: "Nexa";
+                                    font-weight: 300;
+                                    font-size: 4vw;
+                                    text-align: center;
+
+                                }
+                            }
+
+                            .desc {
+                                width: 100%;
+                                display: flex;
+                                align-items: flex-end;
+
+                                .swiper {
+                                    min-height: max-content;
+                                    padding-bottom: 40px;
+
+                                    .swiper-wrapper {
+                                        .swiper-slide {
+                                            .content-wrap {
+                                                .wrap {
+                                                    display: flex;
+
+                                                    .numbering {
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+
+                                                        h1 {
+                                                            font-family: "Nexa";
+                                                            font-weight: 700;
+                                                            font-size: 6vw;
+                                                            color: #D4145A;
+                                                            margin-top: 20px;
+                                                            padding: 0 20px;
+                                                        }
+                                                    }
+
+                                                    .desc {
+                                                        display: flex;
+                                                        align-items: center;
+
+                                                        p {
+                                                            span {
+                                                                font-family: "Nexa";
+                                                                color: #D4145A;
+                                                                padding: 10px 0;
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .swiper-pagination-bullet {
+                                        background: rgba(212, 20, 90, 0.7);
+                                    }
+
+                                    .swiper-pagination-bullet-active {
+                                        background: #D4145A;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.brand-support {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            .br-wrap {
+                width: 80%;
+
+                .content-wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: right;
+
+                    .text-content {
+                        width: 50%;
+                        height: 100%;
+                        background-color: #D4145A;
+                        display: flex;
+
+                        .wrap {
+                            padding: 40px;
+                            min-height: fit-content;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .title {
+                                margin-left: -51%;
+
+                                h1 {
+                                    font-size: 9vw;
+                                    font-family: "Nexa";
+                                    font-weight: 500;
+                                    text-transform: capitalize;
+                                    -webkit-text-stroke: 1px white;
+                                    color: white;
+
+                                    span {
+                                        font-family: "Nexa";
+                                        font-weight: 500;
+                                        color: #D4145A;
+                                    }
+
+                                    &:nth-child(2) {
+                                        margin-left: -3%;
+                                    }
+                                }
+                            }
+
+                            .desc {
+                                p {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.enquiry {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .content-wrap {
+                width: 80%;
+                padding: 50px 0;
+
+                .title-content {
+                    h1 {
+                        font-size: 9vw;
+                        font-family: "Nexa";
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        color: #1B1464;
+                        text-align: center;
+                    }
+                }
+
+                .form-content {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    form {
+                        width: 50%;
+
+                        .form-input {
+
+                            input,
+                            textarea {
+                                width: 100%;
+                                font-size: 16px;
+                                background: none;
+                                outline: none;
+                                border: none;
+                                padding: 10px;
+                                border-bottom: 1px solid black;
+                            }
+                        }
+
+                        .form-submit {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            padding: 30px 0;
+
+                            button {
+                                background: none;
+                                outline: none;
+                                border: none;
+                                padding: 5px 20px;
+                                border-radius: 20px;
+
+                                &[type="submit"] {
+                                    background-color: #1B1464;
+                                    color: white;
+                                    font-family: "Nexa";
+                                    font-weight: 500;
+                                    text-transform: capitalize;
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        section {
+            &.modules .content-wrap .text-content .title h1 {
+                font-size: 2.2rem;
+            }
+
+            &.brand-support {
+                .br-wrap {
+                    .content-wrap {
+                        .text-content {
+                            width: 100%;
+
+                            .wrap {
+                                .title {
+                                    margin: 0;
+
+                                    h1 {
+                                        &:nth-child(2) {
+                                            margin: 0;
+                                        }
+
+                                        span {
+                                            color: white;
+                                        }
+                                    }
+                                }
+
+                                .desc {
+                                    height: 40vh;
+                                    overflow-y: scroll;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.enquiry .content-wrap .form-content form {
+                width: 80%;
+            }
+
+            &.pre-req {
+                .swiper .swiper-wrapper .swiper-slide .content-wrap {
+                    width: 100%;
+
+                    .wrap {
+                        flex-direction: column !important;
+
+                        .title {
+                            h1 {
+                                font-size: 2.5rem;
+
+                            }
+                        }
+
+                        .desc {
+                            p {
+                                span {
+                                    width: 100%;
+                                    text-align: center;
+                                    font-size: 2rem;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.enquiry {
+                .content-wrap {
+                    .title-content {
+                        h1 {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        section {
+
+            &.modules .content-wrap .text-content .desc .table table th,
+            &.modules .content-wrap .text-content .desc .table table td {
+                padding: 10px 5px;
+            }
+
+            &.brand-support .br-wrap {
+                width: 90%;
+            }
+
+            &.enquiry .content-wrap {
+                width: 90%;
+            }
+        }
+    }
+}
